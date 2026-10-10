@@ -1,0 +1,84 @@
+/* Layer order matters: Rough Draft components sit *below* Tailwind utilities,
+   so a utility class (e.g. `hidden`, `mt-4`) can always override a component. */
+@layer theme, base, rd-base, components, rd-components, utilities, rd-utilities;
+@import 'tailwindcss';
+@import '../design-tokens/build/tokens.css';
+@import '../design-tokens/build/theme.css';
+@import '../components/styles.css';
+
+/* Style-guide-only chrome. Product code should never need these. */
+@layer rd-components {
+  .sg-skip { position: absolute; left: 16px; top: -100px; z-index: 2000; }
+  .sg-skip:focus { top: 12px; }
+
+  .sg-header {
+    position: sticky; top: 0; z-index: var(--rd-z-nav);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;
+    padding: 10px 16px; background: var(--rd-bg);
+  }
+  @media (min-width: 768px) { .sg-header { padding: 10px 24px; } }
+  @media (max-width: 767px) {
+    .sg-header { position: static; }
+    .sg-controls { gap: 6px; }
+    .sg-seg button { min-height: 44px; padding: 0 8px; }
+  }
+  .sg-controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .sg-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 14px; background: var(--rd-surface-sunken); }
+  .sg-seg button { min-height: 40px; min-width: 44px; padding: 0 10px; border: 0; border-radius: 11px; background: none; cursor: pointer; font-weight: 700; font-size: 0.8125rem; color: var(--rd-text-secondary); display: inline-flex; align-items: center; gap: 6px; }
+  .sg-seg button[aria-pressed="true"] { background: var(--rd-bg-hero); color: var(--rd-text-on-hero); }
+  .sg-seg button:focus-visible { outline-offset: 1px; }
+
+  .sg-layout { display: grid; max-width: 1320px; margin: 0 auto; }
+  @media (min-width: 1100px) { .sg-layout { grid-template-columns: 220px minmax(0, 1fr); gap: 40px; padding: 0 24px; } }
+  .sg-toc { position: sticky; top: 0; z-index: 50; display: flex; gap: 6px; overflow-x: auto; padding: 10px 16px; background: var(--rd-bg); scrollbar-width: none; }
+  .sg-toc a { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border-radius: 999px; font-weight: 700; font-size: 0.875rem; color: var(--rd-text-primary); text-decoration: none; white-space: nowrap; }
+  .sg-toc a:hover { background: var(--rd-surface-sunken); }
+  .sg-toc a[aria-current="true"] { background: var(--rd-bg-hero); color: var(--rd-text-on-hero); }
+  .sg-toc .sg-num { font-family: var(--rd-font-display); font-size: 0.8125rem; opacity: 0.7; }
+  @media (min-width: 768px) and (max-width: 1099px) { .sg-toc { top: 66px; } }
+  @media (min-width: 1100px) {
+    .sg-toc { flex-direction: column; top: 90px; align-self: start; padding: 24px 0; border: 0; background: none; max-height: calc(100dvh - 100px); overflow-y: auto; }
+    .sg-toc a { border-radius: 10px; }
+  }
+  .sg-main { min-width: 0; padding: 0 16px 120px; }
+  @media (min-width: 768px) { .sg-main { padding: 0 24px 160px; } }
+  @media (min-width: 1100px) { .sg-main { padding: 0 0 160px; } }
+
+  .sg-section { padding-top: 72px; scroll-margin-top: 80px; }
+  .sg-section + .sg-section { margin-top: 96px; }
+  @media (max-width: 1099px) { .sg-section { scroll-margin-top: 130px; } }
+  @media (max-width: 767px) { .sg-section { scroll-margin-top: 70px; } }
+  .sg-section__head { display: grid; gap: 12px; margin-bottom: 40px; max-width: 760px; }
+  .sg-section__num { justify-self: start; }
+  .sg-h3 { font-family: var(--rd-font-sans); font-weight: 800; font-size: 1.25rem; letter-spacing: -0.01em; color: var(--rd-text-strong); margin: 48px 0 16px; display: flex; align-items: center; gap: 10px; }
+  .sg-h3::before { content: ''; width: 12px; height: 12px; background: var(--rd-spark-500); rotate: 45deg; flex: none; }
+  .sg-lede { font-size: var(--rd-text-body-lg); line-height: 1.55; margin: 0; color: var(--rd-text-primary); }
+  .sg-note { font-size: 0.875rem; color: var(--rd-text-secondary); margin: 8px 0 0; }
+  .sg-flag { display: inline-flex; gap: 6px; align-items: center; padding: 2px 8px; border-radius: 6px; background: color-mix(in oklch, var(--rd-error) 14%, transparent); color: var(--rd-error-text); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  .sg-stage { position: relative; padding: 24px; border-radius: var(--rd-radius-md); background: var(--rd-surface); }
+  .sg-stage--grid { background-image: linear-gradient(var(--rd-border-subtle) 1px, transparent 1px), linear-gradient(90deg, var(--rd-border-subtle) 1px, transparent 1px); background-size: 24px 24px; }
+  .sg-label { font-family: var(--rd-font-sans); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rd-text-secondary); }
+  .sg-code { font-family: var(--rd-font-mono); font-size: 0.8125rem; color: var(--rd-text-primary); background: var(--rd-surface-sunken); padding: 1px 6px; border-radius: 6px; }
+
+  .sg-table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+  .sg-table th, .sg-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rd-border-subtle); vertical-align: top; }
+  .sg-table th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rd-text-secondary); }
+  .sg-scroll { overflow-x: auto; border-radius: var(--rd-radius-md); background: var(--rd-surface-raised); }
+
+  .sg-phone {
+    width: 100%; max-width: 380px; height: 760px; overflow: hidden auto; position: relative;
+    border-radius: 40px; background: var(--rd-bg);
+    box-shadow: 0 0 0 8px var(--rd-paper-900), var(--rd-shadow-lg); margin: 8px;
+    scrollbar-width: thin; isolation: isolate;
+  }
+  [data-theme="dark"] .sg-phone { box-shadow: 0 0 0 8px var(--rd-midnight-800), 8px 8px 0 8px var(--rd-shadow); }
+  .sg-phone__bar { position: sticky; top: 0; z-index: 5; height: 34px; display: flex; justify-content: space-between; align-items: center; padding: 0 24px; font-size: 13px; font-weight: 750; background: var(--rd-bg); color: var(--rd-text-strong); }
+
+  .sg-do, .sg-dont { border-radius: var(--rd-radius-md); overflow: hidden; background: var(--rd-surface-raised); }
+  .sg-verdict { display: flex; align-items: center; gap: 8px; padding: 8px 14px; font-weight: 800; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .sg-do .sg-verdict { background: var(--rd-spark-400); color: var(--rd-paper-900); }
+  .sg-dont .sg-verdict { background: var(--rd-sneaker-600); color: var(--rd-white); }
+  .sg-ex { padding: 20px; min-height: 160px; display: grid; place-items: center; }
+  .sg-why { padding: 10px 14px 14px; font-size: 0.875rem; color: var(--rd-text-secondary); margin: 0; }
+}
