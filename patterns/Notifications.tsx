@@ -26,7 +26,7 @@ export function Notifications() {
         <div style={{ display: 'grid', gap: 8, padding: 12, borderRadius: 24, background: 'var(--rd-midnight-500)' }} className="rd-grain">
           {PUSH.map((p) => (
             <div key={p.body} style={{ display: 'grid', gridTemplateColumns: '36px 1fr auto', gap: 10, alignItems: 'start', padding: 12, borderRadius: 16, background: 'color-mix(in oklch, var(--rd-paper-100) 92%, transparent)', color: 'var(--rd-paper-900)' }}>
-              <img src="/favicon.svg" alt="" width={36} height={36} />
+              <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width={36} height={36} />
               <div>
                 <div style={{ fontWeight: 750, fontSize: 14 }}>{p.title}</div>
                 <div style={{ fontSize: 14, lineHeight: 1.35 }}>{p.body}</div>

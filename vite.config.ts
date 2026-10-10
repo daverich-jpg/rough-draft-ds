@@ -14,5 +14,7 @@ export default defineConfig({
       '@patterns': r('./patterns'),
     },
   },
+  // relative base so the build works at github.io/rough-draft-ds/ (and anywhere else)
+  base: './',
   server: { port: 5240, strictPort: true },
 });
