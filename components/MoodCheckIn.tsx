@@ -55,9 +55,9 @@ export function MoodCheckIn({
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           <Character kind={MOOD_CHARACTER[mood]} mood={gentle ? 'soft' : mood === 'hyped' ? 'hyped' : 'soft'} width={92} decorative />
           <div>
-            <h3 className={gentle ? 'rd-heading-lg' : 'rd-display rd-display-md'}>{gentle ? 'saved. thank you for telling us.' : 'logged. that counts.'}</h3>
+            <h3 className={gentle ? 'rd-heading-lg' : 'rd-display rd-display-md'}>{gentle ? 'Saved. Thank you for telling us.' : 'logged. that counts.'}</h3>
             <p className="rd-body rd-secondary" style={{ margin: '6px 0 0' }}>
-              {gentle ? "it's in your drafts, only you can see it. come back whenever." : 'only you can see this. see you tomorrow (or whenever).'}
+              {gentle ? 'Only you can see it. Come back anytime.' : 'only you can see it.'}
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ export function MoodCheckIn({
           <span className="rd-display rd-display-md" style={{ display: 'block' }}>
             {greeting}
           </span>
-          <span className="rd-body rd-secondary">pick the one that's closest. there's no wrong answer.</span>
+          <span className="rd-body rd-secondary">closest one wins. no wrong answers.</span>
         </legend>
         <div className="rd-moods">
           {(Object.keys(MOODS) as Mood[]).map((m) => (
@@ -110,7 +110,7 @@ export function MoodCheckIn({
               <p className="rd-heading-md" style={{ color: 'inherit' }}>
                 heavy days are real. you don't have to fix this one.
               </p>
-              <p className="rd-body">If it feels like too much right now, you can talk to someone today. It's free and confidential.</p>
+              <p className="rd-body">If it's too much, you can talk to someone today. Free and confidential.</p>
               <p className="rd-body" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <Icon name="phone" size={20} />
                 <a href={supportHref} target="_blank" rel="noreferrer">
@@ -121,8 +121,8 @@ export function MoodCheckIn({
           )}
           <fieldset className="rd-fieldset" style={{ gap: 10 }}>
             <legend className="rd-field__label">
-              {gentle ? 'want to name what it’s about?' : "what's in it?"}
-              <span className="rd-field__optional">(optional, pick any)</span>
+              {gentle ? 'Want to name what it’s about?' : "what's in it?"}
+              <span className="rd-field__optional">(optional)</span>
             </legend>
             <div className="rd-chips">
               {CONTEXT_TAGS.map((t) => (
@@ -138,13 +138,13 @@ export function MoodCheckIn({
             </div>
           </fieldset>
           <Field
-            label={gentle ? 'anything you want to get out of your head?' : 'say more? (or don’t)'}
+            label={gentle ? 'Anything you want to get out of your head?' : 'say more? (or don’t)'}
             optional
             hint="only you can see this."
-            error={note.length > maxNote ? `that's ${note.length - maxNote} characters over. trim a little and it'll save.` : undefined}
+            error={note.length > maxNote ? `${note.length - maxNote} over. trim a little to save.` : undefined}
             footer={<CharCount value={note} max={maxNote} />}
           >
-            <Textarea lined rows={4} value={note} onChange={(e) => setNote(e.target.value)} placeholder={gentle ? 'whatever comes. no need to make it make sense.' : 'today i…'} />
+            <Textarea lined rows={4} value={note} onChange={(e) => setNote(e.target.value)} placeholder={gentle ? 'whatever comes. it doesn’t have to make sense.' : 'today i…'} />
           </Field>
         </div>
       )}

@@ -60,11 +60,11 @@ Each character has six expressions: hyped, okay, soft, tired, chaotic, heavy (`<
 
 | Level | Name | Where | Rules | Type voices | Motion |
 |---|---|---|---|---|---|
-| 1 | **loud** | Marketing, campaigns, posters, social | Big declaratives; one joke per surface; provocative but kind underneath | Display + brush + stickers | Slap, stamp, wiggle |
-| 2 | **playful** | Onboarding, success, empty states | Lowercase; humour first, then the useful bit; characters can talk | Display + workhorse, one brush accent | Pop, short slap |
+| 1 | **loud** | Marketing, campaigns, posters, social | Big declaratives; one joke per surface; provocative but kind underneath | Anton + stickers | Slap, stamp, wiggle |
+| 2 | **playful** | Onboarding, success, empty states | Lowercase; humour first, then the useful bit; characters can talk | Anton headline + Archivo | Pop, short slap |
 | 3 | **friendly** | Default UI, settings, forms, buttons | Plain verbs; short; slang only if clearer | Workhorse (display for page titles) | Snappy UI only |
-| 4 | **calm** | Errors, privacy, account, payments, deletion | What happened, then what to do; never blame; one light touch allowed if recovery is easy | Workhorse only | Fades, no bounce |
-| 5 | **gentle** | Distress, crisis, health content, grief, "heavy" check-ins | No jokes, slang or stickers; sentence case; plain words; support visible without scrolling; no timers | Workhorse only | Fades only |
+| 4 | **calm** | Errors, privacy, account, payments, deletion | What happened, then what to do; never blame; one light touch allowed if recovery is easy | Archivo only | Fades, no bounce |
+| 5 | **gentle** | Distress, crisis, health content, grief, "heavy" check-ins | No jokes, slang or stickers; sentence case; plain words; support visible without scrolling; no timers | Archivo only | Fades only |
 
 ### Safety rule
 
@@ -121,7 +121,7 @@ The full, living list is in `patterns/microcopy.ts`.
 ## 6. Visual language (summary; detail in `/foundations`)
 
 - **Colour:** **two key colours, Sunshine Yellow and Midnight Navy.** Yellow is the hero; navy does the heavy lifting. Cream, white and ink are quiet neutrals. Red is for errors only. Green lives only in the characters. Yellow on white is banned for text.
-- **Type:** three voices. Loud Display (Anton, caps), Hand-drawn Brush (Permanent Marker, 1–6 words) and Quiet Workhorse (Archivo). At most 2 per screen + a brush accent.
+- **Type:** two families only. Anton for short uppercase headlines (one per screen), Archivo for everything else. Stickers and mood words are Archivo 800, lowercase.
 - **Shape:** sharp corners for zine and editorial, pillowy for UI. **Strokes sparingly**: shape comes from fill + hard offset sticker shadow (no blur, ever). Strokes only on inputs, ticks, focus and "missing" states.
 - **Motion:** slap, stamp, peel, wiggle. UI under 300ms. Reduced motion means fades.
 - **Layout:** controlled chaos. Collage, overlap and −3° to 3° tilt, always on a 12-column, 8pt grid.

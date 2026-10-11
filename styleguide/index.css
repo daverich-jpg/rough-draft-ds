@@ -8,6 +8,7 @@
 
 /* Style-guide-only chrome. Product code should never need these. */
 @layer rd-components {
+  :root { --sg-mono: ui-monospace, 'SF Mono', Menlo, monospace; } /* code samples only; not a brand font */
   .sg-skip { position: absolute; left: 16px; top: -100px; z-index: 2000; }
   .sg-skip:focus { top: 12px; }
 
@@ -59,7 +60,7 @@
   .sg-stage { position: relative; padding: 24px; border-radius: var(--rd-radius-md); background: var(--rd-surface); }
   .sg-stage--grid { background-image: linear-gradient(var(--rd-border-subtle) 1px, transparent 1px), linear-gradient(90deg, var(--rd-border-subtle) 1px, transparent 1px); background-size: 24px 24px; }
   .sg-label { font-family: var(--rd-font-sans); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rd-text-secondary); }
-  .sg-code { font-family: var(--rd-font-mono); font-size: 0.8125rem; color: var(--rd-text-primary); background: var(--rd-surface-sunken); padding: 1px 6px; border-radius: 6px; }
+  .sg-code { font-family: var(--sg-mono); font-size: 0.8125rem; color: var(--rd-text-primary); background: var(--rd-surface-sunken); padding: 1px 6px; border-radius: 6px; }
 
   .sg-table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
   .sg-table th, .sg-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rd-border-subtle); vertical-align: top; }

@@ -11,8 +11,9 @@ export const STEPS = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
  * multiplier (relative to the seed) and a hue at each end. `pins` hold exact
  * brand hexes; those steps are emitted verbatim, never recomputed.
  *
- * TWO KEY COLOURS (D21): Sunshine Yellow + Midnight Navy carry all brand colour.
- * Paper (cream → ink) is the neutral ramp. Error Red is functional only.
+ * TWO KEY COLOURS (D21) + MINIMAL GROUND (D22): neutrals do ~90% of the work.
+ * Paper (warm) and Night (cool, dark mode) are the ground; navy is the one action
+ * colour; yellow is a highlight. Error Red is functional only.
  * Yellow is light (L≈0.89) so it pins at 400; navy is dark (L 0.19) so it pins
  * at 500. Cream and ink are the two ends of the paper ramp (100 and 900).
  */
@@ -38,15 +39,23 @@ export const SCALES = {
     hue: [278, 272],
   },
   paper: {
-    label: 'Paper (Cream to Ink)',
-    role: 'Warm neutrals. Canvas, surfaces, rules, headline ink.',
-    seed: '#FFEFC4',
-    pins: { 100: '#FFEFC4', 900: '#1E1B16' },
-    L: [0.985, null, 0.905, 0.84, 0.72, 0.6, 0.48, 0.38, 0.3, null],
-    // paper chroma is absolute, because the two pins have very different chroma
-    absoluteC: [0.03, null, 0.05, 0.042, 0.032, 0.026, 0.021, 0.017, 0.013, null],
-    hue: [90, 80],
+    label: 'Paper (warm neutral)',
+    role: 'The ground. Canvas, cards, rules, text. Chroma 0.004–0.012: warm, but quiet (D22).',
+    seed: '#1E1B16',
+    pins: { 900: '#1E1B16' },
+    L: [0.988, 0.968, 0.935, 0.885, 0.78, 0.6, 0.48, 0.38, 0.3, null],
+    absoluteC: [0.004, 0.006, 0.008, 0.01, 0.012, 0.012, 0.011, 0.01, 0.009, null],
+    hue: [88, 80],
   },
+  night: {
+    label: 'Night (cool neutral)',
+    role: 'Dark-mode ground. Navy-tinted greys at low chroma, so dark mode is calm, not saturated (D22).',
+    seed: '#090446',
+    L: [0.97, 0.92, 0.84, 0.7, 0.54, 0.42, 0.33, 0.27, 0.22, 0.175],
+    absoluteC: [0.005, 0.01, 0.014, 0.02, 0.024, 0.026, 0.026, 0.024, 0.021, 0.018],
+    hue: [282, 282],
+  },
+
   // Functional only: errors and destructive actions. Not a brand colour.
   sneaker: {
     label: 'Error Red',
@@ -71,33 +80,34 @@ export const STATIC_COLORS = {
  */
 export const SEMANTIC = {
   light: {
-    'bg': 'paper.100',
-    'bg-hero': 'sunshine.400',
-    'surface': 'paper.50',
+    'bg': 'paper.50',
+    'bg-hero': 'sunshine.100',
+    'surface': 'white',
     'surface-raised': 'white',
-    'surface-sunken': 'paper.200',
-    'surface-warm': 'sunshine.200',
+    'surface-sunken': 'paper.100',
+    'surface-warm': 'sunshine.50',
     'surface-inverse': 'midnight.500',
     'surface-accent': 'midnight.500',
-    'scrim': 'midnight.500',
+    'scrim': 'night.900',
     'text-strong': 'paper.900',
     'text-primary': 'paper.800',
     'text-secondary': 'paper.600',
     'text-placeholder': 'paper.600',
-    'text-inverse': 'paper.100',
+    'text-inverse': 'paper.50',
     'text-on-hero': 'paper.900',
-    'text-on-accent': 'paper.100',
-    'text-on-inverse': 'paper.100',
+    'text-on-accent': 'white',
+    'text-on-inverse': 'white',
     'text-link': 'midnight.400',
     'text-on-warm': 'paper.900',
+    'text-on-mood': 'paper.900',
     'border': 'paper.900',
-    'border-subtle': 'paper.300',
-    'border-input': 'paper.700',
+    'border-subtle': 'paper.200',
+    'border-input': 'paper.500',
     'focus-ring': 'midnight.400',
-    'focus-halo': 'paper.50',
-    'shadow': 'paper.900',
+    'focus-halo': 'white',
+    'shadow': 'paper.200',
     'success': 'midnight.500',
-    'on-success': 'paper.100',
+    'on-success': 'white',
     'success-text': 'midnight.400',
     'warning': 'sunshine.400',
     'on-warning': 'paper.900',
@@ -108,39 +118,40 @@ export const SEMANTIC = {
     'info': 'midnight.50',
     'on-info': 'midnight.500',
     'info-text': 'midnight.400',
-    'mood-hyped': 'sunshine.400',
-    'mood-okay': 'sunshine.200',
-    'mood-soft': 'paper.200',
-    'mood-tired': 'midnight.100',
-    'mood-chaotic': 'sunshine.500',
-    'mood-heavy': 'midnight.200',
+    'mood-hyped': 'sunshine.300',
+    'mood-okay': 'sunshine.100',
+    'mood-soft': 'paper.100',
+    'mood-tired': 'midnight.50',
+    'mood-chaotic': 'sunshine.200',
+    'mood-heavy': 'midnight.100',
   },
   dark: {
-    'bg': 'midnight.500',
-    'bg-hero': 'sunshine.400',
-    'surface': 'midnight.400',
-    'surface-raised': 'midnight.300',
-    'surface-sunken': 'midnight.700',
-    'surface-warm': 'sunshine.900',
-    'surface-inverse': 'paper.100',
+    'bg': 'night.800',
+    'bg-hero': 'night.600',
+    'surface': 'night.700',
+    'surface-raised': 'night.700',
+    'surface-sunken': 'night.900',
+    'surface-warm': 'night.600',
+    'surface-inverse': 'paper.50',
     'surface-accent': 'sunshine.400',
-    'scrim': 'midnight.900',
+    'scrim': 'night.900',
     'text-strong': 'white',
     'text-primary': 'paper.100',
-    'text-secondary': 'midnight.100',
-    'text-placeholder': 'midnight.200',
+    'text-secondary': 'night.200',
+    'text-placeholder': 'night.300',
     'text-inverse': 'paper.900',
-    'text-on-hero': 'paper.900',
+    'text-on-hero': 'white',
     'text-on-accent': 'paper.900',
     'text-on-inverse': 'paper.900',
     'text-link': 'sunshine.300',
     'text-on-warm': 'paper.100',
+    'text-on-mood': 'paper.900',
     'border': 'paper.100',
-    'border-subtle': 'midnight.300',
-    'border-input': 'midnight.100',
+    'border-subtle': 'night.600',
+    'border-input': 'night.300',
     'focus-ring': 'sunshine.400',
     'focus-halo': 'paper.900',
-    'shadow': 'sunshine.800',
+    'shadow': 'black',
     'success': 'sunshine.400',
     'on-success': 'paper.900',
     'success-text': 'sunshine.300',
@@ -150,15 +161,15 @@ export const SEMANTIC = {
     'error': 'sneaker.400',
     'on-error': 'paper.900',
     'error-text': 'sneaker.300',
-    'info': 'midnight.300',
+    'info': 'night.600',
     'on-info': 'white',
     'info-text': 'midnight.100',
-    'mood-hyped': 'sunshine.400',
-    'mood-okay': 'sunshine.200',
-    'mood-soft': 'paper.200',
-    'mood-tired': 'midnight.100',
-    'mood-chaotic': 'sunshine.500',
-    'mood-heavy': 'midnight.200',
+    'mood-hyped': 'sunshine.300',
+    'mood-okay': 'sunshine.100',
+    'mood-soft': 'paper.100',
+    'mood-tired': 'midnight.50',
+    'mood-chaotic': 'sunshine.200',
+    'mood-heavy': 'midnight.100',
   },
 };
 
@@ -180,7 +191,7 @@ export const CONTRAST_PAIRS = [
   ['error-text', 'bg', 'text'],
   ['error-text', 'surface-raised', 'text'],
   ['info-text', 'bg', 'text'],
-  ...['mood-hyped', 'mood-okay', 'mood-soft', 'mood-tired', 'mood-chaotic', 'mood-heavy'].map((m) => ['text-on-hero', m, 'text']),
+  ...['mood-hyped', 'mood-okay', 'mood-soft', 'mood-tired', 'mood-chaotic', 'mood-heavy'].map((m) => ['text-on-mood', m, 'text']),
   ['border', 'bg', 'ui'],
   ['border', 'surface-raised', 'ui'],
   ['border-input', 'surface-raised', 'ui'],
@@ -189,12 +200,10 @@ export const CONTRAST_PAIRS = [
 ];
 
 // ── Typography ───────────────────────────────────────────────────────────────
+// Two families only (D23): Anton shouts, Archivo does everything else.
 export const FONTS = {
-  display: { value: "'Anton', 'Impact', 'Arial Narrow Bold', sans-serif", role: 'Loud Display. Headlines, shouting, posters. Always uppercase.' },
-  brush: { value: "'Permanent Marker', 'Comic Sans MS', cursive", role: 'Hand-drawn Brush. Stickers, annotations, 1 to 6 words. Never body copy.' },
-  sans: { value: "'Archivo', ui-sans-serif, system-ui, sans-serif", role: 'Quiet Workhorse. UI, body, forms. Condensed italic (wdth 62) for zine captions.' },
-  poster: { value: "'Bricolage Grotesque', 'Archivo', sans-serif", role: 'Optional poster display. Hero and campaign moments only.' },
-  mono: { value: "ui-monospace, 'SF Mono', Menlo, monospace", role: 'Timestamps, codes. Rare.' },
+  display: { value: "'Anton', 'Impact', 'Arial Narrow Bold', sans-serif", role: 'Display. Short headlines only, always uppercase.' },
+  sans: { value: "'Archivo', ui-sans-serif, system-ui, sans-serif", role: 'Everything else: UI, body, labels, stickers, captions.' },
 };
 
 // Fluid sizes: clamp(min, preferred, max) for viewports 360px to 1280px.
@@ -210,10 +219,7 @@ export const TYPE_SCALE = {
   'body': { size: '1.0625rem', lh: '1.55', ls: '0', font: 'sans', weight: 400, use: 'Default body (17px). Never below 16px for paragraphs.' },
   'body-sm': { size: '0.9375rem', lh: '1.5', ls: '0.003em', font: 'sans', weight: 400, use: 'Secondary UI text, metadata.' },
   'label': { size: '0.875rem', lh: '1.3', ls: '0.02em', font: 'sans', weight: 650, use: 'Form labels, buttons (sm), tabs.' },
-  'caption': { size: '0.8125rem', lh: '1.4', ls: '0.01em', font: 'sans', weight: 500, use: 'Zine caption: Archivo condensed italic (wdth 62).' },
-  'brush-xl': { size: 'clamp(2.25rem, 1.7rem + 2.4vw, 3.75rem)', lh: '1', ls: '0', font: 'brush', weight: 400, use: 'Affirmation posters (≤6 words).' },
-  'brush-lg': { size: 'clamp(1.625rem, 1.4rem + 1vw, 2.25rem)', lh: '1.05', ls: '0', font: 'brush', weight: 400, use: 'Stickers, annotations.' },
-  'brush-md': { size: '1.375rem', lh: '1.1', ls: '0.01em', font: 'brush', weight: 400, use: 'Small stickers, badges. Brush minimum size.' },
+  'caption': { size: '0.75rem', lh: '1.4', ls: '0.06em', font: 'sans', weight: 650, use: 'Kicker / meta label: Archivo, uppercase, tracked.' },
 };
 
 // ── Space, radius, borders, elevation ────────────────────────────────────────

@@ -158,8 +158,6 @@ L.push('/* Reduced motion: movement collapses to quick fades. Opt-in override vi
 const reduced = ['delight', 'celebrate', 'slow'].map((k) => `--${P}-duration-${k}: 160ms;`).join(' ');
 L.push(`@media (prefers-reduced-motion: reduce) { :root:not([data-motion="full"]) { ${reduced} --${P}-ease-spring: ease-out; --${P}-ease-slap: ease-out; } }`);
 L.push(`[data-motion="reduced"] { ${reduced} --${P}-ease-spring: ease-out; --${P}-ease-slap: ease-out; }`, '');
-L.push('/* Dyslexia-friendly option: brush voice swaps to a wide, heavy workhorse. */');
-L.push(`[data-brush="plain"] { --${P}-font-brush: 'Archivo', ui-sans-serif, system-ui, sans-serif; }`, '');
 out('design-tokens/build/tokens.css', L.join('\n'));
 
 // ── 4. Tailwind v4 theme ─────────────────────────────────────────────────────

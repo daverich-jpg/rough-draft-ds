@@ -16,7 +16,7 @@ export function Chip({
       type="button"
       aria-pressed={Boolean(selected)}
       className={cx('rd-chip', className)}
-      style={color ? ({ '--rd-chip-on': color } as CSSProperties) : undefined}
+      style={color ? ({ '--rd-chip-on': color, '--rd-chip-fg': 'var(--rd-text-on-mood)' } as CSSProperties) : undefined}
       onClick={() => onToggle?.(!selected)}
       {...rest}
     >

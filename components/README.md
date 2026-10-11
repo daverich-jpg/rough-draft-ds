@@ -20,7 +20,7 @@ import 'rough-draft-ds/components/styles.css';
 | `Sticker` | `color`, `shape` tag/round/burst, `tilt`, `announce` | `aria-hidden` unless `announce` |
 | `Card` | `tone` default/hero/warm/inverse, `zine`, `tape`, `grain`, `tilt`, `flat`, `as` | Semantic `as` element |
 | `ScreenshotCard` | `posts[]`, `theme` dark/light, `tape`, `tilt` | `figure` with label; real text; labelled counts |
-| `ZineCard` | `quote`, `body`, `by`, `color`, `voice` display/brush, `tape`, `halftone`, `tilt` | `blockquote` + `figcaption` |
+| `ZineCard` | `quote`, `body`, `by`, `color`, `voice` display/lettering, `tape`, `halftone`, `tilt` | `blockquote` + `figcaption` |
 | `Modal`, `Sheet` | `open`, `onClose`, `title`, `description`, `actions`, `gentle`, `dismissible` | Native `<dialog>`: focus trap, Esc, inert page, focus return |
 | `ToastProvider` + `useToast()` | `{ title, body, tone, action, duration }` | Polite region + `role=alert` for errors; pause on hover/focus; no auto-dismiss with an action |
 | `Tabs` | `items[]`, `label`, `defaultTab`, `onChange` | WAI-ARIA tabs, roving tabindex, ←/→/Home/End |

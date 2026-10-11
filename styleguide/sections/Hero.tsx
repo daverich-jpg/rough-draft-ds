@@ -9,7 +9,7 @@ export function Hero() {
           <span className="rd-caption">design system · v0.1 · october 2026</span>
           <h1 id="hero-h" className="rd-display rd-display-2xl" style={{ marginTop: 8 }}>
             Rough
-            <span className="rd-brush" style={{ display: 'block', textTransform: 'none', fontSize: '0.62em', lineHeight: 1, rotate: '-4deg', translate: '0.2em -0.05em', width: 'fit-content', position: 'relative', isolation: 'isolate' }}>
+            <span className="rd-brush" style={{ display: 'block', fontSize: '0.55em', lineHeight: 1, rotate: '-3deg', translate: '0.15em -0.02em', width: 'fit-content', position: 'relative', isolation: 'isolate' }}>
               draft
               <span aria-hidden style={{ position: 'absolute', left: -4, right: -8, bottom: '0.12em', height: '0.22em', background: 'var(--rd-sunshine-400)', zIndex: -1, rotate: '2deg' }} />
             </span>
@@ -44,7 +44,7 @@ export function Hero() {
           <Character kind="sprout" mood="hyped" width={180} title="Sprout, the main character, looking hyped" />
         </div>
         <div className="col-span-6 lg:col-span-4 rd-overprint rd-grain" style={{ padding: '24px 20px', rotate: '1deg', boxShadow: 'var(--rd-shadow-md)' }}>
-          <p className="rd-poster rd-overprint__ink" data-ink="in progress" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)' }} aria-label="in progress">
+          <p className="rd-display rd-overprint__ink" data-ink="in progress" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)' }} aria-label="in progress">
             in progress
           </p>
           <span className="rd-caption" style={{ color: 'var(--rd-midnight-500)' }}>

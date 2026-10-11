@@ -58,15 +58,12 @@ function useAttr(name: string, value: string, unsetWhen: string) {
 export function App() {
   const [theme, setTheme] = useState<Theme>(() => read('rd:theme', 'system') as Theme);
   const [motion, setMotion] = useState<MotionPref>(() => read('rd:motion', 'system') as MotionPref);
-  const [brush, setBrush] = useState(() => read('rd:brush', 'brush'));
   const [active, setActive] = useState<string>('brand');
 
   useAttr('data-theme', theme, 'system');
   useAttr('data-motion', motion, 'system');
-  useAttr('data-brush', brush, 'brush');
   useEffect(() => write('rd:theme', theme), [theme]);
   useEffect(() => write('rd:motion', motion), [motion]);
-  useEffect(() => write('rd:brush', brush), [brush]);
 
   useEffect(() => {
     const io = new IntersectionObserver(
@@ -104,14 +101,6 @@ export function App() {
                 {m === 'system' ? 'motion' : m}
               </button>
             ))}
-          </div>
-          <div className="sg-seg" role="group" aria-label="brush font">
-            <button type="button" aria-pressed={brush === 'brush'} onClick={() => setBrush('brush')}>
-              <span className="rd-brush" style={{ fontSize: 15 }}>brush</span>
-            </button>
-            <button type="button" aria-pressed={brush === 'plain'} onClick={() => setBrush('plain')} title="dyslexia-friendly: replaces the brush font">
-              plain
-            </button>
           </div>
         </div>
       </header>

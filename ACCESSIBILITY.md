@@ -52,7 +52,7 @@ Status key: ✅ meets · ⚠️ meets with a caveat · 🔲 needs product/QA wor
 
 - Every field has a real `<label>`. Hints and errors are linked with `aria-describedby`, and invalid fields get `aria-invalid`.
 - Chips use `aria-pressed`; toggles use `role="switch"` + `aria-checked`; radio groups use native `fieldset`/`legend`/radios (arrow keys for free).
-- The mood check-in is a native radio group. Each option is labelled with a description ("tired, running on fumes"), not just the brush word.
+- The mood check-in is a native radio group. Each option is labelled with a description ("tired, running on fumes"), not just the mood word.
 - Modal and Sheet use **native `<dialog>.showModal()`**: focus trap, inert background, Esc and focus return, with no library. Labelled by title and described by description.
 - Tabs follow the WAI-ARIA pattern: roving tabindex, ←/→/Home/End, `aria-controls`/`aria-labelledby`.
 - Toasts: a `polite` live region, and errors use `role="alert"`. Toasts pause on hover/focus, and **toasts with an action never auto-dismiss** (WCAG 2.2.1).
@@ -72,15 +72,13 @@ Status key: ✅ meets · ⚠️ meets with a caveat · 🔲 needs product/QA wor
 
 ## 7. Dyslexia and readability ✅
 
-- **`data-brush="plain"`** swaps every brush-font instance (stickers, mood words, wordmark, sticker buttons, brush quotes) for heavy, wide Archivo. It's exposed as a user setting (the style guide header has the switch).
-- Brush is limited to 1–6 words at a 22px minimum, and never carries information alone.
-- Body is 17px with 1.55 line height, left-aligned (no justified body text; justified only in short zine captions), with 45–75ch line length.
-- All-caps display type is limited to short headlines (2–7 words).
-- ⚠️ Condensed italic captions (Archivo wdth 62) are harder to read for some users. They're for short metadata only, never instructions.
+- **Two families only (D23):** Anton for short uppercase headlines, Archivo for everything else. No script or condensed-italic text anywhere, which removes the old need for a dyslexia "plain lettering" toggle.
+- Body is 17px with 1.55 line height, left-aligned (never justified), 45–75ch line length.
+- All-caps Anton is limited to 2–5 word headlines, one per screen.
 
 ## 8. Sensitive content and safety ✅ / 🔲
 
-- **Gentle mode** (tone 5): no jokes, slang, stickers, display or brush type, or bounce. Support links are visible without scrolling. No timers or auto-dismiss.
+- **Gentle mode** (tone 5): no jokes, slang, stickers, Anton headlines or bounce. Support links are visible without scrolling. No timers or auto-dismiss.
 - Choosing "heavy" in the check-in surfaces support **before** submit.
 - Content notes on community posts cover the text with a soft stripe and a "Show it?" button. Readers opt in.
 - Crisis screen: "I'm safe for now" is always available, with no guilt for leaving.

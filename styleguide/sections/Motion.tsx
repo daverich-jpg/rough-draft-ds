@@ -46,7 +46,7 @@ export function Motion() {
                 <td>
                   <Code>duration-{k}</Code>
                 </td>
-                <td style={{ fontFamily: 'var(--rd-font-mono)' }}>{v.value}</td>
+                <td style={{ fontFamily: 'var(--sg-mono)' }}>{v.value}</td>
                 <td style={{ width: '40%' }}>
                   <span style={{ display: 'block', height: 10, width: `${Math.min(100, parseInt(v.value) / 9)}%`, background: parseInt(v.value) <= 300 ? 'var(--rd-bg-hero)' : 'var(--rd-sunshine-200)', borderRadius: 99 }} />
                 </td>

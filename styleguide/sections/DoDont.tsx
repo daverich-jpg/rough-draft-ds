@@ -60,11 +60,11 @@ export function DoDont() {
           bad={
             <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
               <Character kind="sprout" mood="hyped" width={64} decorative />
-              <p className="rd-brush rd-brush-md" style={{ margin: 0 }}>cheer up!! 💀</p>
+              <p className="rd-brush" style={{ margin: 0 }}>cheer up!! 💀</p>
             </div>
           }
           goodWhy="Heavy moments get Moss, the workhorse voice and plain words."
-          badWhy="Hype character + brush + joke on a sad day. Never."
+          badWhy="Hype character + sticker voice + joke on a sad day. Never."
         />
         <Pair
           good={

@@ -1,49 +1,45 @@
 # Typography
 
-Three voices, taken from the three posters on the moodboard.
+**Two families, nothing else (D23).** Anton shouts; Archivo does everything else. Hierarchy comes from size, weight and case, never from adding a typeface.
 
-| Voice | Font | Class | Use | Rules |
+| Role | Font | Classes | Use | Rules |
 |---|---|---|---|---|
-| **Loud Display** | Anton | `.rd-display` + `.rd-display-{2xl…sm}` | Headlines, posters, page titles | Always uppercase · 2–7 words · max one `2xl` per page · never in gentle contexts |
-| **Hand-drawn Brush** | Permanent Marker | `.rd-brush` + `.rd-brush-{xl,lg,md}` | Stickers, annotations, affirmations | 1–6 words · min 22px · never body · never the only carrier of info · swaps to Archivo when `data-brush="plain"` |
-| **Quiet Workhorse** | Archivo (variable, wdth 62–125) | `.rd-body*`, `.rd-heading-*`, `.rd-label` | UI, body, forms, buttons | Sentence case or lowercase · 17px body · 1.55 line height |
-| *Zine caption* | Archivo italic, wdth 62.5% | `.rd-caption` | Metadata, pull-quote bodies | Uppercase, short runs only |
-| *Poster (optional)* | Bricolage Grotesque 800 | `.rd-poster` | Campaign heroes | Lowercase, −0.04em; counts as a display voice |
+| **Display** | Anton | `.rd-display` + `.rd-display-{2xl…sm}` | Page heroes, onboarding headlines, empty-state titles | Uppercase · 2–5 words · one per screen · never in gentle contexts |
+| **Workhorse** | Archivo (400–900) | `.rd-body*`, `.rd-heading-*`, `.rd-label` | Body, UI, forms, buttons | Body 17px / 1.55 · headings 700–750 |
+| ↳ accent | Archivo 800, lowercase | `.rd-brush`, stickers, mood words, wordmark "draft" | Small delight moments | 1–5 words; the old brush font's job, now in Archivo |
+| ↳ kicker | Archivo 650, uppercase, +0.06em | `.rd-caption` | Dates, "today's prompt", meta | Short runs only |
 
 ## Fluid scale
 
-All sizes are `clamp()` from a 360px to a 1280px viewport (see `TYPE_SCALE` in `design-tokens/source.mjs`).
+All sizes are `clamp()` from a 360px to a 1280px viewport (`TYPE_SCALE` in `design-tokens/source.mjs`).
 
 | Token | Min → max | Line height | Use |
 |---|---|---|---|
-| display-2xl | 64 → 140px | 0.88 | Posters, campaign heroes |
+| display-2xl | 64 → 140px | 0.88 | Campaign heroes |
 | display-xl | 48 → 96px | 0.9 | Page heroes |
-| display-lg | 36 → 64px | 0.92 | Section headers |
-| display-md | 28 → 44px | 0.95 | Card headlines, modal titles |
+| display-lg | 36 → 64px | 0.92 | Section / screen headlines |
+| display-md | 28 → 44px | 0.95 | Card headlines, empty states |
 | display-sm | 22 → 30px | 1 | Small shouty labels |
-| heading-lg | 22 → 28px | 1.2 | Workhorse heading |
-| heading-md | 18 → 21px | 1.25 | Card titles |
-| body-lg | 18 → 20px | 1.55 | Intros, onboarding |
+| heading-lg | 22 → 28px | 1.2 | Archivo heading, quiet screen titles |
+| heading-md | 18 → 21px | 1.25 | Card / row titles |
+| body-lg | 18 → 20px | 1.55 | Intros |
 | body | 17px | 1.55 | Default |
-| body-sm | 15px | 1.5 | Metadata, secondary UI |
-| label | 14px / 650 | 1.3 | Labels, tabs |
-| caption | 13px | 1.4 | Zine captions |
-| brush-xl / lg / md | 36→60 / 26→36 / 22px | 1–1.1 | Affirmations / stickers / small stickers |
+| body-sm | 15px | 1.5 | Secondary text |
+| label | 14px / 650 | 1.3 | Form labels, tabs |
+| caption | 12px / 650 | 1.4 | Kickers, meta |
 
 ## Rules
 
-- **At most two voices per screen, plus one brush accent.** Display + workhorse is the default pair.
-- If a headline needs a comma, it's a workhorse heading, not display.
-- Gentle (tone 5) screens use the workhorse only.
-- Paragraphs never go below 16px; line length is 45–75ch; left-aligned.
-- Weights: 400 body, 650 labels, 700–750 headings and buttons, 850 for plain-brush substitution.
+- **No third font, ever:** no script, no condensed italics, no extra display face.
+- One Anton headline per screen. If a screen has a question headline (e.g. the check-in), the page title drops to an Archivo heading.
+- If a headline needs a comma, it's an Archivo heading.
+- Paragraphs never go below 16px; 45–75ch; left-aligned, never justified.
+- Gentle (tone 5) screens: Archivo only.
 
 ## Loading
 
-The style guide loads from Google Fonts. For production, self-host:
+The style guide and app load `Anton` + `Archivo:wght@400..900` from Google Fonts. For production, self-host:
 
 ```bash
-npm i @fontsource/anton @fontsource/permanent-marker @fontsource-variable/archivo @fontsource/bricolage-grotesque
+npm i @fontsource/anton @fontsource-variable/archivo
 ```
-
-Import `@fontsource-variable/archivo/wdth.css` *and* `wdth-italic.css` to get the condensed italic.

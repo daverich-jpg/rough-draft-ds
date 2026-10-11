@@ -31,11 +31,11 @@ export function Texture() {
               }}
             >
               {cls === 'rd-overprint' && (
-                <span className="rd-poster rd-overprint__ink" data-ink="drafts" style={{ fontSize: 56 }}>
+                <span className="rd-display rd-overprint__ink" data-ink="drafts" style={{ fontSize: 56 }}>
                   drafts
                 </span>
               )}
-              {cls === 'rd-tape' && <span className="rd-brush rd-brush-md" style={{ color: 'var(--rd-paper-900)' }}>stuck it here</span>}
+              {cls === 'rd-tape' && <span className="rd-brush" style={{ color: 'var(--rd-paper-900)' }}>stuck it here</span>}
             </div>
             <figcaption>
               <Code>.{cls}</Code> <strong style={{ color: 'var(--rd-text-strong)' }}>{name}</strong>

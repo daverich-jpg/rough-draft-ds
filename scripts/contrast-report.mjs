@@ -22,7 +22,7 @@ md.push('Legend: **AAA** ≥ 7 · **AA** ≥ 4.5 · **large only** 3 to 4.5 (≥
 const core = [
   ['Sunshine', '#FFD86C'],
   ['Paper White', '#FFFFFF'],
-  ['Cream', '#FFEFC4'],
+  ['Paper', '#FCFBF8'],
   ['Midnight Navy', '#090446'],
   ['Ink', '#1E1B16'],
 ];

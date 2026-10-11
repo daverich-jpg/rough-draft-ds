@@ -8,13 +8,13 @@ Legend: **AAA** ≥ 7 · **AA** ≥ 4.5 · **large only** 3 to 4.5 (≥24px, or 
 
 Rows are the text colour, columns are the background.
 
-| text ↓ / bg → | Sunshine | Paper White | Cream | Midnight Navy | Ink |
+| text ↓ / bg → | Sunshine | Paper White | Paper | Midnight Navy | Ink |
 |---|---|---|---|---|---|
-| **Sunshine** | · | 1.37 ❌ | 1.20 ❌ | 13.68 ✅ | 12.50 ✅ |
-| **Paper White** | 1.37 ❌ | · | 1.14 ❌ | 18.79 ✅ | 17.16 ✅ |
-| **Cream** | 1.20 ❌ | 1.14 ❌ | · | 16.46 ✅ | 15.03 ✅ |
-| **Midnight Navy** | 13.68 ✅ | 18.79 ✅ | 16.46 ✅ | · | 1.09 ❌ |
-| **Ink** | 12.50 ✅ | 17.16 ✅ | 15.03 ✅ | 1.09 ❌ | · |
+| **Sunshine** | · | 1.37 ❌ | 1.33 ❌ | 13.68 ✅ | 12.50 ✅ |
+| **Paper White** | 1.37 ❌ | · | 1.03 ❌ | 18.79 ✅ | 17.16 ✅ |
+| **Paper** | 1.33 ❌ | 1.03 ❌ | · | 18.16 ✅ | 16.59 ✅ |
+| **Midnight Navy** | 13.68 ✅ | 18.79 ✅ | 18.16 ✅ | · | 1.09 ❌ |
+| **Ink** | 12.50 ✅ | 17.16 ✅ | 16.59 ✅ | 1.09 ❌ | · |
 
 ### Banned text pairings (decorative fills only)
 
@@ -27,109 +27,109 @@ Rows are the text colour, columns are the background.
 
 | foreground | background | fg | bg | ratio | grade |
 |---|---|---|---|---|---|
-| `text-strong` | `bg` | #1E1B16 | #FFEFC4 | 15.03 | AAA |
-| `text-strong` | `surface` | #1E1B16 | #FFFAEC | 16.46 | AAA |
+| `text-strong` | `bg` | #1E1B16 | #FCFBF8 | 16.59 | AAA |
+| `text-strong` | `surface` | #1E1B16 | #FFFFFF | 17.16 | AAA |
 | `text-strong` | `surface-raised` | #1E1B16 | #FFFFFF | 17.16 | AAA |
-| `text-strong` | `surface-sunken` | #1E1B16 | #EEDEBB | 12.91 | AAA |
-| `text-primary` | `bg` | #312D27 | #FFEFC4 | 11.98 | AAA |
-| `text-primary` | `surface` | #312D27 | #FFFAEC | 13.12 | AAA |
-| `text-primary` | `surface-raised` | #312D27 | #FFFFFF | 13.68 | AAA |
-| `text-primary` | `surface-sunken` | #312D27 | #EEDEBB | 10.29 | AAA |
-| `text-secondary` | `bg` | #635D50 | #FFEFC4 | 5.73 | AA |
-| `text-secondary` | `surface` | #635D50 | #FFFAEC | 6.27 | AA |
-| `text-secondary` | `surface-raised` | #635D50 | #FFFFFF | 6.54 | AA |
-| `text-secondary` | `surface-sunken` | #635D50 | #EEDEBB | 4.92 | AA |
-| `text-placeholder` | `bg` | #635D50 | #FFEFC4 | 5.73 | AA (placeholder held to body AA) |
-| `text-placeholder` | `surface` | #635D50 | #FFFAEC | 6.27 | AA (placeholder held to body AA) |
-| `text-placeholder` | `surface-raised` | #635D50 | #FFFFFF | 6.54 | AA (placeholder held to body AA) |
-| `text-placeholder` | `surface-sunken` | #635D50 | #EEDEBB | 4.92 | AA (placeholder held to body AA) |
-| `text-link` | `bg` | #1A1664 | #FFEFC4 | 13.70 | AAA |
-| `text-link` | `surface` | #1A1664 | #FFFAEC | 15.00 | AAA |
+| `text-strong` | `surface-sunken` | #1E1B16 | #F6F4F0 | 15.62 | AAA |
+| `text-primary` | `bg` | #302D29 | #FCFBF8 | 13.24 | AAA |
+| `text-primary` | `surface` | #302D29 | #FFFFFF | 13.70 | AAA |
+| `text-primary` | `surface-raised` | #302D29 | #FFFFFF | 13.70 | AAA |
+| `text-primary` | `surface-sunken` | #302D29 | #F6F4F0 | 12.47 | AAA |
+| `text-secondary` | `bg` | #615D57 | #FCFBF8 | 6.32 | AA |
+| `text-secondary` | `surface` | #615D57 | #FFFFFF | 6.54 | AA |
+| `text-secondary` | `surface-raised` | #615D57 | #FFFFFF | 6.54 | AA |
+| `text-secondary` | `surface-sunken` | #615D57 | #F6F4F0 | 5.95 | AA |
+| `text-placeholder` | `bg` | #615D57 | #FCFBF8 | 6.32 | AA (placeholder held to body AA) |
+| `text-placeholder` | `surface` | #615D57 | #FFFFFF | 6.54 | AA (placeholder held to body AA) |
+| `text-placeholder` | `surface-raised` | #615D57 | #FFFFFF | 6.54 | AA (placeholder held to body AA) |
+| `text-placeholder` | `surface-sunken` | #615D57 | #F6F4F0 | 5.95 | AA (placeholder held to body AA) |
+| `text-link` | `bg` | #1A1664 | #FCFBF8 | 15.11 | AAA |
+| `text-link` | `surface` | #1A1664 | #FFFFFF | 15.64 | AAA |
 | `text-link` | `surface-raised` | #1A1664 | #FFFFFF | 15.64 | AAA |
-| `text-link` | `surface-sunken` | #1A1664 | #EEDEBB | 11.77 | AAA |
-| `text-on-hero` | `bg-hero` | #1E1B16 | #FFD86C | 12.50 | AAA |
-| `text-on-warm` | `surface-warm` | #1E1B16 | #FFEBBA | 14.58 | AAA |
-| `text-on-accent` | `surface-accent` | #FFEFC4 | #090446 | 16.46 | AAA |
-| `text-on-inverse` | `surface-inverse` | #FFEFC4 | #090446 | 16.46 | AAA |
-| `on-success` | `success` | #FFEFC4 | #090446 | 16.46 | AAA |
+| `text-link` | `surface-sunken` | #1A1664 | #F6F4F0 | 14.24 | AAA |
+| `text-on-hero` | `bg-hero` | #1E1B16 | #FFF4D4 | 15.65 | AAA |
+| `text-on-warm` | `surface-warm` | #1E1B16 | #FFFAE9 | 16.43 | AAA |
+| `text-on-accent` | `surface-accent` | #FFFFFF | #090446 | 18.79 | AAA |
+| `text-on-inverse` | `surface-inverse` | #FFFFFF | #090446 | 18.79 | AAA |
+| `on-success` | `success` | #FFFFFF | #090446 | 18.79 | AAA |
 | `on-warning` | `warning` | #1E1B16 | #FFD86C | 12.50 | AAA |
 | `on-error` | `error` | #FFFFFF | #BE2514 | 6.06 | AA |
 | `on-info` | `info` | #090446 | #F1F3FD | 16.98 | AAA |
-| `success-text` | `bg` | #1A1664 | #FFEFC4 | 13.70 | AAA |
-| `warning-text` | `bg` | #6D4700 | #FFEFC4 | 7.21 | AAA |
-| `error-text` | `bg` | #9B1301 | #FFEFC4 | 7.40 | AAA |
+| `success-text` | `bg` | #1A1664 | #FCFBF8 | 15.11 | AAA |
+| `warning-text` | `bg` | #6D4700 | #FCFBF8 | 7.95 | AAA |
+| `error-text` | `bg` | #9B1301 | #FCFBF8 | 8.16 | AAA |
 | `error-text` | `surface-raised` | #9B1301 | #FFFFFF | 8.44 | AAA |
-| `info-text` | `bg` | #1A1664 | #FFEFC4 | 13.70 | AAA |
-| `text-on-hero` | `mood-hyped` | #1E1B16 | #FFD86C | 12.50 | AAA |
-| `text-on-hero` | `mood-okay` | #1E1B16 | #FFEBBA | 14.58 | AAA |
-| `text-on-hero` | `mood-soft` | #1E1B16 | #EEDEBB | 12.91 | AAA |
-| `text-on-hero` | `mood-tired` | #1E1B16 | #D7DCF9 | 12.66 | AAA |
-| `text-on-hero` | `mood-chaotic` | #1E1B16 | #EBB443 | 9.11 | AAA |
-| `text-on-hero` | `mood-heavy` | #1E1B16 | #9AA5EB | 7.32 | AAA |
-| `border` | `bg` | #1E1B16 | #FFEFC4 | 15.03 | AA (UI) |
+| `info-text` | `bg` | #1A1664 | #FCFBF8 | 15.11 | AAA |
+| `text-on-mood` | `mood-hyped` | #1E1B16 | #FFE19E | 13.50 | AAA |
+| `text-on-mood` | `mood-okay` | #1E1B16 | #FFF4D4 | 15.65 | AAA |
+| `text-on-mood` | `mood-soft` | #1E1B16 | #F6F4F0 | 15.62 | AAA |
+| `text-on-mood` | `mood-tired` | #1E1B16 | #F1F3FD | 15.51 | AAA |
+| `text-on-mood` | `mood-chaotic` | #1E1B16 | #FFEBBA | 14.58 | AAA |
+| `text-on-mood` | `mood-heavy` | #1E1B16 | #D7DCF9 | 12.66 | AAA |
+| `border` | `bg` | #1E1B16 | #FCFBF8 | 16.59 | AA (UI) |
 | `border` | `surface-raised` | #1E1B16 | #FFFFFF | 17.16 | AA (UI) |
-| `border-input` | `surface-raised` | #474238 | #FFFFFF | 9.98 | AA (UI) |
-| `focus-ring` | `bg` | #1A1664 | #FFEFC4 | 13.70 | AA (UI) |
-| `focus-ring` | `surface` | #1A1664 | #FFFAEC | 15.00 | AA (UI) |
+| `border-input` | `surface-raised` | #848078 | #FFFFFF | 3.93 | AA (UI) |
+| `focus-ring` | `bg` | #1A1664 | #FCFBF8 | 15.11 | AA (UI) |
+| `focus-ring` | `surface` | #1A1664 | #FFFFFF | 15.64 | AA (UI) |
 | `focus-ring` | `surface-raised` | #1A1664 | #FFFFFF | 15.64 | AA (UI) |
-| `focus-ring` | `surface-sunken` | #1A1664 | #EEDEBB | 11.77 | AA (UI) |
-| `focus-ring` | `bg-hero` | #1A1664 | #FFD86C | 11.39 | AA (UI) |
-| `focus-halo` | `surface-inverse` | #FFFAEC | #090446 | 18.02 | AA (UI) |
-| `focus-halo` | `surface-accent` | #FFFAEC | #090446 | 18.02 | AA (UI) |
-| `focus-ring` | `surface-warm` | #1A1664 | #FFEBBA | 13.29 | AA (UI) |
+| `focus-ring` | `surface-sunken` | #1A1664 | #F6F4F0 | 14.24 | AA (UI) |
+| `focus-ring` | `bg-hero` | #1A1664 | #FFF4D4 | 14.26 | AA (UI) |
+| `focus-halo` | `surface-inverse` | #FFFFFF | #090446 | 18.79 | AA (UI) |
+| `focus-halo` | `surface-accent` | #FFFFFF | #090446 | 18.79 | AA (UI) |
+| `focus-ring` | `surface-warm` | #1A1664 | #FFFAE9 | 14.97 | AA (UI) |
 
 ## 2. Semantic pairs: dark theme
 
 | foreground | background | fg | bg | ratio | grade |
 |---|---|---|---|---|---|
-| `text-strong` | `bg` | #FFFFFF | #090446 | 18.79 | AAA |
-| `text-strong` | `surface` | #FFFFFF | #1A1664 | 15.64 | AAA |
-| `text-strong` | `surface-raised` | #FFFFFF | #2C2891 | 11.54 | AAA |
-| `text-strong` | `surface-sunken` | #FFFFFF | #04002D | 20.13 | AAA |
-| `text-primary` | `bg` | #FFEFC4 | #090446 | 16.46 | AAA |
-| `text-primary` | `surface` | #FFEFC4 | #1A1664 | 13.70 | AAA |
-| `text-primary` | `surface-raised` | #FFEFC4 | #2C2891 | 10.11 | AAA |
-| `text-primary` | `surface-sunken` | #FFEFC4 | #04002D | 17.64 | AAA |
-| `text-secondary` | `bg` | #D7DCF9 | #090446 | 13.87 | AAA |
-| `text-secondary` | `surface` | #D7DCF9 | #1A1664 | 11.54 | AAA |
-| `text-secondary` | `surface-raised` | #D7DCF9 | #2C2891 | 8.52 | AAA |
-| `text-secondary` | `surface-sunken` | #D7DCF9 | #04002D | 14.86 | AAA |
-| `text-placeholder` | `bg` | #9AA5EB | #090446 | 8.01 | AAA (placeholder held to body AA) |
-| `text-placeholder` | `surface` | #9AA5EB | #1A1664 | 6.67 | AA (placeholder held to body AA) |
-| `text-placeholder` | `surface-raised` | #9AA5EB | #2C2891 | 4.92 | AA (placeholder held to body AA) |
-| `text-placeholder` | `surface-sunken` | #9AA5EB | #04002D | 8.59 | AAA (placeholder held to body AA) |
-| `text-link` | `bg` | #FFE19E | #090446 | 14.78 | AAA |
-| `text-link` | `surface` | #FFE19E | #1A1664 | 12.30 | AAA |
-| `text-link` | `surface-raised` | #FFE19E | #2C2891 | 9.08 | AAA |
-| `text-link` | `surface-sunken` | #FFE19E | #04002D | 15.83 | AAA |
-| `text-on-hero` | `bg-hero` | #1E1B16 | #FFD86C | 12.50 | AAA |
-| `text-on-warm` | `surface-warm` | #FFEFC4 | #482C00 | 11.25 | AAA |
+| `text-strong` | `bg` | #FFFFFF | #191924 | 17.41 | AAA |
+| `text-strong` | `surface` | #FFFFFF | #242532 | 15.15 | AAA |
+| `text-strong` | `surface-raised` | #FFFFFF | #242532 | 15.15 | AAA |
+| `text-strong` | `surface-sunken` | #FFFFFF | #0F1018 | 18.96 | AAA |
+| `text-primary` | `bg` | #F6F4F0 | #191924 | 15.85 | AAA |
+| `text-primary` | `surface` | #F6F4F0 | #242532 | 13.80 | AAA |
+| `text-primary` | `surface-raised` | #F6F4F0 | #242532 | 13.80 | AAA |
+| `text-primary` | `surface-sunken` | #F6F4F0 | #0F1018 | 17.26 | AAA |
+| `text-secondary` | `bg` | #C9CAD4 | #191924 | 10.68 | AAA |
+| `text-secondary` | `surface` | #C9CAD4 | #242532 | 9.30 | AAA |
+| `text-secondary` | `surface-raised` | #C9CAD4 | #242532 | 9.30 | AAA |
+| `text-secondary` | `surface-sunken` | #C9CAD4 | #0F1018 | 11.63 | AAA |
+| `text-placeholder` | `bg` | #9C9DAB | #191924 | 6.49 | AA (placeholder held to body AA) |
+| `text-placeholder` | `surface` | #9C9DAB | #242532 | 5.65 | AA (placeholder held to body AA) |
+| `text-placeholder` | `surface-raised` | #9C9DAB | #242532 | 5.65 | AA (placeholder held to body AA) |
+| `text-placeholder` | `surface-sunken` | #9C9DAB | #0F1018 | 7.06 | AAA (placeholder held to body AA) |
+| `text-link` | `bg` | #FFE19E | #191924 | 13.70 | AAA |
+| `text-link` | `surface` | #FFE19E | #242532 | 11.92 | AAA |
+| `text-link` | `surface-raised` | #FFE19E | #242532 | 11.92 | AAA |
+| `text-link` | `surface-sunken` | #FFE19E | #0F1018 | 14.91 | AAA |
+| `text-on-hero` | `bg-hero` | #FFFFFF | #333443 | 12.26 | AAA |
+| `text-on-warm` | `surface-warm` | #F6F4F0 | #333443 | 11.16 | AAA |
 | `text-on-accent` | `surface-accent` | #1E1B16 | #FFD86C | 12.50 | AAA |
-| `text-on-inverse` | `surface-inverse` | #1E1B16 | #FFEFC4 | 15.03 | AAA |
+| `text-on-inverse` | `surface-inverse` | #1E1B16 | #FCFBF8 | 16.59 | AAA |
 | `on-success` | `success` | #1E1B16 | #FFD86C | 12.50 | AAA |
 | `on-warning` | `warning` | #1E1B16 | #FFD86C | 12.50 | AAA |
 | `on-error` | `error` | #1E1B16 | #F75F4C | 5.47 | AA |
-| `on-info` | `info` | #FFFFFF | #2C2891 | 11.54 | AAA |
-| `success-text` | `bg` | #FFE19E | #090446 | 14.78 | AAA |
-| `warning-text` | `bg` | #FFE19E | #090446 | 14.78 | AAA |
-| `error-text` | `bg` | #FF9181 | #090446 | 8.61 | AAA |
-| `error-text` | `surface-raised` | #FF9181 | #2C2891 | 5.29 | AA |
-| `info-text` | `bg` | #D7DCF9 | #090446 | 13.87 | AAA |
-| `text-on-hero` | `mood-hyped` | #1E1B16 | #FFD86C | 12.50 | AAA |
-| `text-on-hero` | `mood-okay` | #1E1B16 | #FFEBBA | 14.58 | AAA |
-| `text-on-hero` | `mood-soft` | #1E1B16 | #EEDEBB | 12.91 | AAA |
-| `text-on-hero` | `mood-tired` | #1E1B16 | #D7DCF9 | 12.66 | AAA |
-| `text-on-hero` | `mood-chaotic` | #1E1B16 | #EBB443 | 9.11 | AAA |
-| `text-on-hero` | `mood-heavy` | #1E1B16 | #9AA5EB | 7.32 | AAA |
-| `border` | `bg` | #FFEFC4 | #090446 | 16.46 | AA (UI) |
-| `border` | `surface-raised` | #FFEFC4 | #2C2891 | 10.11 | AA (UI) |
-| `border-input` | `surface-raised` | #D7DCF9 | #2C2891 | 8.52 | AA (UI) |
-| `focus-ring` | `bg` | #FFD86C | #090446 | 13.68 | AA (UI) |
-| `focus-ring` | `surface` | #FFD86C | #1A1664 | 11.39 | AA (UI) |
-| `focus-ring` | `surface-raised` | #FFD86C | #2C2891 | 8.40 | AA (UI) |
-| `focus-ring` | `surface-sunken` | #FFD86C | #04002D | 14.66 | AA (UI) |
-| `focus-halo` | `bg-hero` | #1E1B16 | #FFD86C | 12.50 | AA (UI) |
-| `focus-halo` | `surface-inverse` | #1E1B16 | #FFEFC4 | 15.03 | AA (UI) |
+| `on-info` | `info` | #FFFFFF | #333443 | 12.26 | AAA |
+| `success-text` | `bg` | #FFE19E | #191924 | 13.70 | AAA |
+| `warning-text` | `bg` | #FFE19E | #191924 | 13.70 | AAA |
+| `error-text` | `bg` | #FF9181 | #191924 | 7.98 | AAA |
+| `error-text` | `surface-raised` | #FF9181 | #242532 | 6.94 | AA |
+| `info-text` | `bg` | #D7DCF9 | #191924 | 12.85 | AAA |
+| `text-on-mood` | `mood-hyped` | #1E1B16 | #FFE19E | 13.50 | AAA |
+| `text-on-mood` | `mood-okay` | #1E1B16 | #FFF4D4 | 15.65 | AAA |
+| `text-on-mood` | `mood-soft` | #1E1B16 | #F6F4F0 | 15.62 | AAA |
+| `text-on-mood` | `mood-tired` | #1E1B16 | #F1F3FD | 15.51 | AAA |
+| `text-on-mood` | `mood-chaotic` | #1E1B16 | #FFEBBA | 14.58 | AAA |
+| `text-on-mood` | `mood-heavy` | #1E1B16 | #D7DCF9 | 12.66 | AAA |
+| `border` | `bg` | #F6F4F0 | #191924 | 15.85 | AA (UI) |
+| `border` | `surface-raised` | #F6F4F0 | #242532 | 13.80 | AA (UI) |
+| `border-input` | `surface-raised` | #9C9DAB | #242532 | 5.65 | AA (UI) |
+| `focus-ring` | `bg` | #FFD86C | #191924 | 12.68 | AA (UI) |
+| `focus-ring` | `surface` | #FFD86C | #242532 | 11.03 | AA (UI) |
+| `focus-ring` | `surface-raised` | #FFD86C | #242532 | 11.03 | AA (UI) |
+| `focus-ring` | `surface-sunken` | #FFD86C | #0F1018 | 13.81 | AA (UI) |
+| `focus-ring` | `bg-hero` | #FFD86C | #333443 | 8.93 | AA (UI) |
+| `focus-halo` | `surface-inverse` | #1E1B16 | #FCFBF8 | 16.59 | AA (UI) |
 | `focus-halo` | `surface-accent` | #1E1B16 | #FFD86C | 12.50 | AA (UI) |
-| `focus-ring` | `surface-warm` | #FFD86C | #482C00 | 9.35 | AA (UI) |
+| `focus-ring` | `surface-warm` | #FFD86C | #333443 | 8.93 | AA (UI) |
 

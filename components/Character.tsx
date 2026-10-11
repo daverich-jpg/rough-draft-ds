@@ -122,8 +122,8 @@ function Face({ mood, skin }: { mood: Mood; skin: string }) {
           <path d="M44 41.5 Q51 33 58 41.5 Z" fill={skin} stroke={INK} strokeWidth={2.4} strokeLinejoin="round" />
           <path d="M62 41.5 Q69 33 76 41.5 Z" fill={skin} stroke={INK} strokeWidth={2.4} strokeLinejoin="round" />
           <path d="M54 53 q3 -1.6 6 0 t6 0" {...stroke} />
-          <text x={86} y={22} fontFamily="Permanent Marker, cursive" fontSize={12} fill={INK}>z</text>
-          <text x={93} y={13} fontFamily="Permanent Marker, cursive" fontSize={9} fill={INK}>z</text>
+          <text x={86} y={22} fontFamily="Archivo, sans-serif" fontWeight={800} fontSize={12} fill={INK}>z</text>
+          <text x={93} y={13} fontFamily="Archivo, sans-serif" fontWeight={800} fontSize={9} fill={INK}>z</text>
         </g>
       );
     case 'chaotic':
@@ -190,7 +190,7 @@ export function Character({ kind = 'sprout', mood = 'okay', crop = 'full', title
             <feFlood floodColor={WHITE} />
             <feComposite in2="grow" operator="in" result="outline" />
             <feOffset in="grow" dx="2.5" dy="3" result="shadowAlpha" />
-            <feFlood floodColor={INK} floodOpacity="0.9" />
+            <feFlood floodColor={c('paper', '300')} />
             <feComposite in2="shadowAlpha" operator="in" result="shadow" />
             <feMerge>
               <feMergeNode in="shadow" />

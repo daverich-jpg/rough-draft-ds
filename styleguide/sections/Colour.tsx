@@ -18,7 +18,7 @@ export const ratio = (a: string, b: string) => {
 const CORE: Array<[string, string, string]> = [
   ['Sunshine Yellow', '#FFD86C', 'key colour 1 · hero'],
   ['Midnight Navy', '#090446', 'key colour 2 · depth'],
-  ['Cream', '#FFEFC4', 'neutral · canvas'],
+  ['Paper', '#FCFBF8', 'neutral · canvas'],
   ['Paper White', '#FFFFFF', 'neutral · raised'],
   ['Ink', '#1E1B16', 'neutral · text'],
   ['Error Red', '#BE2514', 'functional · errors only'],
@@ -32,7 +32,7 @@ const Swatch = ({ hex, step, pinned, oklch }: { hex: string; step: string; pinne
         {step}
         {pinned && <span aria-label="pinned brand colour"> ●</span>}
       </span>
-      <span style={{ fontFamily: 'var(--rd-font-mono)', fontSize: 11 }}>{hex}</span>
+      <span style={{ fontFamily: 'var(--sg-mono)', fontSize: 11 }}>{hex}</span>
     </div>
   );
 };
@@ -47,7 +47,7 @@ export function Colour() {
       title="Colour"
       lede={
         <>
-          <strong>Two key colours: Sunshine Yellow and Midnight Navy.</strong> Yellow is the hero; navy does the heavy lifting. Cream, white and ink are quiet neutrals, and red appears only for errors. Scales are generated in OKLCH. Brand hexes are pinned exactly (●), and everything else is computed and gamut-mapped.
+          <strong>Minimal: neutrals do ~90% of the work.</strong> Warm paper (light) and cool night (dark) are the ground. Navy is the one action colour. Sunshine Yellow is a highlight: pale tints for surfaces, full strength only for tiny marks. Red appears only for errors. Scales are generated in OKLCH. Brand hexes are pinned exactly (●), and everything else is computed and gamut-mapped.
         </>
       }
     >
@@ -56,7 +56,7 @@ export function Colour() {
         {CORE.map(([n, h, r]) => (
           <div key={n} style={{ background: h, color: lum(h) < 0.25 ? '#fff' : '#1E1B16', padding: 14, minHeight: 150, display: 'grid', alignContent: 'end', gap: 2 }}>
             <span style={{ fontWeight: 800 }}>{n}</span>
-            <span style={{ fontFamily: 'var(--rd-font-mono)', fontSize: 13 }}>{h}</span>
+            <span style={{ fontFamily: 'var(--sg-mono)', fontSize: 13 }}>{h}</span>
             <span className="rd-caption" style={{ color: 'inherit', opacity: 0.85 }}>
               {r}
             </span>
@@ -84,7 +84,7 @@ export function Colour() {
         ))}
       </div>
       <p className="sg-note">
-        <Flag>decision</Flag> Yellow pins at 400 and navy at 500, so both sides of each ramp stay usable. Cream and ink are the two ends of one "paper" ramp (100 and 900). Status and mood colours are tints of the two key colours; Error Red is the only exception. Lime, brown, pink and blue were removed (D21). Green survives only inside the character illustrations.
+        <Flag>decision</Flag> Yellow pins at 400 and navy at 500, so both sides of each ramp stay usable. Paper is a low-chroma warm neutral ramp ending in ink (900); Night is its cool, navy-tinted twin for dark mode. Status and mood colours are tints of the two key colours; Error Red is the only exception. Lime, brown, pink and blue were removed (D21). Green survives only inside the character illustrations.
       </p>
 
       <H3>Semantic tokens</H3>
@@ -137,7 +137,7 @@ export function Colour() {
                   return (
                     <td key={bn} style={{ background: bh, color: fh, fontWeight: 800 }}>
                       Aa{' '}
-                      <span style={{ fontFamily: 'var(--rd-font-mono)', fontSize: 12, fontWeight: 600, background: 'var(--rd-surface-raised)', color: g === 'fail' ? 'var(--rd-error-text)' : 'var(--rd-text-strong)', padding: '0 4px', borderRadius: 4 }}>
+                      <span style={{ fontFamily: 'var(--sg-mono)', fontSize: 12, fontWeight: 600, background: 'var(--rd-surface-raised)', color: g === 'fail' ? 'var(--rd-error-text)' : 'var(--rd-text-strong)', padding: '0 4px', borderRadius: 4 }}>
                         {r.toFixed(1)} {g}
                       </span>
                     </td>
@@ -158,8 +158,9 @@ export function Colour() {
           <strong>Only two brand colours on any screen: yellow and navy.</strong> Neutrals fill the rest. If you're reaching for a third colour, use a tint of one of the two instead.
         </li>
         <li>Red is functional: errors and destructive actions only. Never decorative.</li>
-        <li>Body text on cream is warm ink (paper-800). Headlines are Ink.</li>
-        <li>Dark mode is navy-led. It's designed, not inverted: the accent flips to yellow, focus rings and links go yellow, and sticker shadows become a deep yellow shade.</li>
+        <li><strong>Yellow is a highlight, not a surface.</strong> Large areas get the pale tint (sunshine-100); full Sunshine only on small marks (the wordmark swipe, stickers, the dark-mode action).</li>
+        <li>Body text on paper is warm ink (paper-800, 13:1). Headlines are Ink.</li>
+        <li>Dark mode is a low-chroma navy-tinted charcoal (night), not saturated navy. The action colour flips to yellow. Shadows are soft in light, black in dark.</li>
         <li>Moods are tints of the two key colours, and the text on them is always ink. Colour is never the only signal; every mood also has a face and a word.</li>
       </ul>
     </Section>

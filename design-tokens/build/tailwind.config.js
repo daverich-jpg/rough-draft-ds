@@ -40,6 +40,18 @@ export default {
         "800": "var(--rd-paper-800)",
         "900": "var(--rd-paper-900)"
       },
+      "night": {
+        "50": "var(--rd-night-50)",
+        "100": "var(--rd-night-100)",
+        "200": "var(--rd-night-200)",
+        "300": "var(--rd-night-300)",
+        "400": "var(--rd-night-400)",
+        "500": "var(--rd-night-500)",
+        "600": "var(--rd-night-600)",
+        "700": "var(--rd-night-700)",
+        "800": "var(--rd-night-800)",
+        "900": "var(--rd-night-900)"
+      },
       "sneaker": {
         "50": "var(--rd-sneaker-50)",
         "100": "var(--rd-sneaker-100)",
@@ -73,6 +85,7 @@ export default {
       "text-on-inverse": "var(--rd-text-on-inverse)",
       "text-link": "var(--rd-text-link)",
       "text-on-warm": "var(--rd-text-on-warm)",
+      "text-on-mood": "var(--rd-text-on-mood)",
       "border": "var(--rd-border)",
       "border-subtle": "var(--rd-border-subtle)",
       "border-input": "var(--rd-border-input)",
@@ -100,10 +113,7 @@ export default {
     },
     "fontFamily": {
       "display": "var(--rd-font-display)",
-      "brush": "var(--rd-font-brush)",
-      "sans": "var(--rd-font-sans)",
-      "poster": "var(--rd-font-poster)",
-      "mono": "var(--rd-font-mono)"
+      "sans": "var(--rd-font-sans)"
     },
     "fontSize": {
       "display-2xl": [
@@ -188,27 +198,6 @@ export default {
         {
           "lineHeight": "var(--rd-text-caption-lh)",
           "letterSpacing": "var(--rd-text-caption-ls)"
-        }
-      ],
-      "brush-xl": [
-        "var(--rd-text-brush-xl)",
-        {
-          "lineHeight": "var(--rd-text-brush-xl-lh)",
-          "letterSpacing": "var(--rd-text-brush-xl-ls)"
-        }
-      ],
-      "brush-lg": [
-        "var(--rd-text-brush-lg)",
-        {
-          "lineHeight": "var(--rd-text-brush-lg-lh)",
-          "letterSpacing": "var(--rd-text-brush-lg-ls)"
-        }
-      ],
-      "brush-md": [
-        "var(--rd-text-brush-md)",
-        {
-          "lineHeight": "var(--rd-text-brush-md-lh)",
-          "letterSpacing": "var(--rd-text-brush-md-ls)"
         }
       ]
     },

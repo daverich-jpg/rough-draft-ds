@@ -1,6 +1,6 @@
 # Colour
 
-**Two key colours: Sunshine Yellow and Midnight Navy.** Yellow is the hero; navy does the heavy lifting. Cream, white and ink are quiet neutrals. Red appears only for errors.
+**Minimal (D22): neutrals do ~90% of the work.** Two key colours, Sunshine Yellow and Midnight Navy: navy is the one action colour, yellow is a highlight (pale tints on surfaces, full strength only on small marks). Paper (warm) and Night (cool, dark mode) are the ground. Red appears only for errors.
 
 ## Palette
 
@@ -8,7 +8,8 @@
 |---|---|---|---|---|
 | **Key colour 1** | Sunshine Yellow | `#FFD86C` | 89.5% 0.134 89.7 | `sunshine-400` (pinned) |
 | **Key colour 2** | Midnight Navy | `#090446` | 19.3% 0.114 272.1 | `midnight-500` (pinned) |
-| Neutral | Cream | `#FFEFC4` | 95.4% 0.058 90.0 | `paper-100` (pinned): page canvas |
+| Neutral | Paper | `#FCFBF8` | 98.8% 0.004 91 | `paper-50`: page canvas (chroma ≤0.012 across the ramp) |
+| Neutral | Night | `#191924` | 21.9% 0.021 284 | `night-800`: dark-mode canvas (navy-tinted charcoal) |
 | Neutral | Paper White | `#FFFFFF` | — | `white`: raised surfaces, die-cut edges |
 | Neutral | Ink | `#1E1B16` | 22.4% 0.010 80.6 | `paper-900` (pinned): headlines, sticker shadows |
 | Functional | Error Red | `#BE2514` | 52.0% 0.190 30.5 | `sneaker-600`: errors and destructive actions **only** |
@@ -37,8 +38,8 @@ Lime, brown, pink and blue were removed (D21). Green survives only inside the ch
 
 ## Themes
 
-- **Light:** cream canvas, white raised cards, warm-ink body text (paper-800, 12:1), ink headlines, navy accent and focus ring, ink sticker shadows.
-- **Dark (designed, not inverted):** navy canvas, lifted navy surfaces, cream text, yellow accent, yellow focus ring and links, and sticker shadows in a deep yellow shade (`sunshine-800`) so they stay visible on navy. The hero stays yellow.
+- **Light:** paper canvas, white cards, warm-ink body text (paper-800, 13.2:1), navy action colour and focus ring, pale-yellow highlight surfaces, soft paper-200 shadows.
+- **Dark (designed, not inverted):** low-chroma night canvas (not saturated navy), lifted night surfaces, warm off-white text (15.9:1), yellow action colour, focus ring and links, black shadows.
 
 ## Rules
 

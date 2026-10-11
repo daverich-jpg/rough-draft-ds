@@ -114,58 +114,114 @@ export const tokens = {
       }
     },
     "paper": {
-      "label": "Paper (Cream to Ink)",
-      "role": "Warm neutrals. Canvas, surfaces, rules, headline ink.",
+      "label": "Paper (warm neutral)",
+      "role": "The ground. Canvas, cards, rules, text. Chroma 0.004–0.012: warm, but quiet (D22).",
       "steps": {
         "50": {
-          "hex": "#FFFAEC",
-          "oklch": "oklch(98.5% 0.019 90.5)",
+          "hex": "#FCFBF8",
+          "oklch": "oklch(98.8% 0.004 91.4)",
           "pinned": false
         },
         "100": {
-          "hex": "#FFEFC4",
-          "oklch": "oklch(95.4% 0.058 90.0)",
-          "pinned": true
+          "hex": "#F6F4F0",
+          "oklch": "oklch(96.8% 0.006 84.6)",
+          "pinned": false
         },
         "200": {
-          "hex": "#EEDEBB",
-          "oklch": "oklch(90.5% 0.049 86.3)",
+          "hex": "#ECE9E4",
+          "oklch": "oklch(93.5% 0.007 80.7)",
           "pinned": false
         },
         "300": {
-          "hex": "#D6C9AC",
-          "oklch": "oklch(83.9% 0.042 86.7)",
+          "hex": "#DCD9D2",
+          "oklch": "oklch(88.6% 0.010 87.5)",
           "pinned": false
         },
         "400": {
-          "hex": "#AEA48E",
-          "oklch": "oklch(72.1% 0.033 86.5)",
+          "hex": "#BBB7AF",
+          "oklch": "oklch(78.0% 0.012 84.6)",
           "pinned": false
         },
         "500": {
-          "hex": "#877F6F",
-          "oklch": "oklch(59.9% 0.025 84.6)",
+          "hex": "#848078",
+          "oklch": "oklch(60.1% 0.013 84.6)",
           "pinned": false
         },
         "600": {
-          "hex": "#635D50",
-          "oklch": "oklch(48.0% 0.022 86.2)",
+          "hex": "#615D57",
+          "oklch": "oklch(48.0% 0.011 78.2)",
           "pinned": false
         },
         "700": {
-          "hex": "#474238",
-          "oklch": "oklch(38.1% 0.018 84.6)",
+          "hex": "#45423C",
+          "oklch": "oklch(38.0% 0.011 84.6)",
           "pinned": false
         },
         "800": {
-          "hex": "#312D27",
-          "oklch": "oklch(29.9% 0.012 78.1)",
+          "hex": "#302D29",
+          "oklch": "oklch(29.9% 0.008 75.3)",
           "pinned": false
         },
         "900": {
           "hex": "#1E1B16",
           "oklch": "oklch(22.4% 0.010 80.6)",
           "pinned": true
+        }
+      }
+    },
+    "night": {
+      "label": "Night (cool neutral)",
+      "role": "Dark-mode ground. Navy-tinted greys at low chroma, so dark mode is calm, not saturated (D22).",
+      "steps": {
+        "50": {
+          "hex": "#F4F5F8",
+          "oklch": "oklch(97.0% 0.004 271.4)",
+          "pinned": false
+        },
+        "100": {
+          "hex": "#E3E4EB",
+          "oklch": "oklch(92.0% 0.010 279.7)",
+          "pinned": false
+        },
+        "200": {
+          "hex": "#C9CAD4",
+          "oklch": "oklch(84.1% 0.014 281.5)",
+          "pinned": false
+        },
+        "300": {
+          "hex": "#9C9DAB",
+          "oklch": "oklch(70.0% 0.020 282.6)",
+          "pinned": false
+        },
+        "400": {
+          "hex": "#6C6D7D",
+          "oklch": "oklch(54.0% 0.025 282.7)",
+          "pinned": false
+        },
+        "500": {
+          "hex": "#4A4C5B",
+          "oklch": "oklch(42.0% 0.025 279.3)",
+          "pinned": false
+        },
+        "600": {
+          "hex": "#333443",
+          "oklch": "oklch(33.0% 0.026 281.9)",
+          "pinned": false
+        },
+        "700": {
+          "hex": "#242532",
+          "oklch": "oklch(26.9% 0.024 281.2)",
+          "pinned": false
+        },
+        "800": {
+          "hex": "#191924",
+          "oklch": "oklch(21.9% 0.021 284.5)",
+          "pinned": false
+        },
+        "900": {
+          "hex": "#0F1018",
+          "oklch": "oklch(17.6% 0.017 279.0)",
+          "pinned": false
         }
       }
     },
@@ -229,28 +285,28 @@ export const tokens = {
   "semantic": {
     "light": {
       "bg": {
-        "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "ref": "paper.50",
+        "hex": "#FCFBF8"
       },
       "bg-hero": {
-        "ref": "sunshine.400",
-        "hex": "#FFD86C"
+        "ref": "sunshine.100",
+        "hex": "#FFF4D4"
       },
       "surface": {
-        "ref": "paper.50",
-        "hex": "#FFFAEC"
+        "ref": "white",
+        "hex": "#FFFFFF"
       },
       "surface-raised": {
         "ref": "white",
         "hex": "#FFFFFF"
       },
       "surface-sunken": {
-        "ref": "paper.200",
-        "hex": "#EEDEBB"
+        "ref": "paper.100",
+        "hex": "#F6F4F0"
       },
       "surface-warm": {
-        "ref": "sunshine.200",
-        "hex": "#FFEBBA"
+        "ref": "sunshine.50",
+        "hex": "#FFFAE9"
       },
       "surface-inverse": {
         "ref": "midnight.500",
@@ -261,8 +317,8 @@ export const tokens = {
         "hex": "#090446"
       },
       "scrim": {
-        "ref": "midnight.500",
-        "hex": "#090446"
+        "ref": "night.900",
+        "hex": "#0F1018"
       },
       "text-strong": {
         "ref": "paper.900",
@@ -270,31 +326,31 @@ export const tokens = {
       },
       "text-primary": {
         "ref": "paper.800",
-        "hex": "#312D27"
+        "hex": "#302D29"
       },
       "text-secondary": {
         "ref": "paper.600",
-        "hex": "#635D50"
+        "hex": "#615D57"
       },
       "text-placeholder": {
         "ref": "paper.600",
-        "hex": "#635D50"
+        "hex": "#615D57"
       },
       "text-inverse": {
-        "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "ref": "paper.50",
+        "hex": "#FCFBF8"
       },
       "text-on-hero": {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
       "text-on-accent": {
-        "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "ref": "white",
+        "hex": "#FFFFFF"
       },
       "text-on-inverse": {
-        "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "ref": "white",
+        "hex": "#FFFFFF"
       },
       "text-link": {
         "ref": "midnight.400",
@@ -304,37 +360,41 @@ export const tokens = {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
+      "text-on-mood": {
+        "ref": "paper.900",
+        "hex": "#1E1B16"
+      },
       "border": {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
       "border-subtle": {
-        "ref": "paper.300",
-        "hex": "#D6C9AC"
+        "ref": "paper.200",
+        "hex": "#ECE9E4"
       },
       "border-input": {
-        "ref": "paper.700",
-        "hex": "#474238"
+        "ref": "paper.500",
+        "hex": "#848078"
       },
       "focus-ring": {
         "ref": "midnight.400",
         "hex": "#1A1664"
       },
       "focus-halo": {
-        "ref": "paper.50",
-        "hex": "#FFFAEC"
+        "ref": "white",
+        "hex": "#FFFFFF"
       },
       "shadow": {
-        "ref": "paper.900",
-        "hex": "#1E1B16"
+        "ref": "paper.200",
+        "hex": "#ECE9E4"
       },
       "success": {
         "ref": "midnight.500",
         "hex": "#090446"
       },
       "on-success": {
-        "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "ref": "white",
+        "hex": "#FFFFFF"
       },
       "success-text": {
         "ref": "midnight.400",
@@ -377,66 +437,66 @@ export const tokens = {
         "hex": "#1A1664"
       },
       "mood-hyped": {
-        "ref": "sunshine.400",
-        "hex": "#FFD86C"
+        "ref": "sunshine.300",
+        "hex": "#FFE19E"
       },
       "mood-okay": {
+        "ref": "sunshine.100",
+        "hex": "#FFF4D4"
+      },
+      "mood-soft": {
+        "ref": "paper.100",
+        "hex": "#F6F4F0"
+      },
+      "mood-tired": {
+        "ref": "midnight.50",
+        "hex": "#F1F3FD"
+      },
+      "mood-chaotic": {
         "ref": "sunshine.200",
         "hex": "#FFEBBA"
       },
-      "mood-soft": {
-        "ref": "paper.200",
-        "hex": "#EEDEBB"
-      },
-      "mood-tired": {
+      "mood-heavy": {
         "ref": "midnight.100",
         "hex": "#D7DCF9"
-      },
-      "mood-chaotic": {
-        "ref": "sunshine.500",
-        "hex": "#EBB443"
-      },
-      "mood-heavy": {
-        "ref": "midnight.200",
-        "hex": "#9AA5EB"
       }
     },
     "dark": {
       "bg": {
-        "ref": "midnight.500",
-        "hex": "#090446"
+        "ref": "night.800",
+        "hex": "#191924"
       },
       "bg-hero": {
-        "ref": "sunshine.400",
-        "hex": "#FFD86C"
+        "ref": "night.600",
+        "hex": "#333443"
       },
       "surface": {
-        "ref": "midnight.400",
-        "hex": "#1A1664"
+        "ref": "night.700",
+        "hex": "#242532"
       },
       "surface-raised": {
-        "ref": "midnight.300",
-        "hex": "#2C2891"
+        "ref": "night.700",
+        "hex": "#242532"
       },
       "surface-sunken": {
-        "ref": "midnight.700",
-        "hex": "#04002D"
+        "ref": "night.900",
+        "hex": "#0F1018"
       },
       "surface-warm": {
-        "ref": "sunshine.900",
-        "hex": "#482C00"
+        "ref": "night.600",
+        "hex": "#333443"
       },
       "surface-inverse": {
-        "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "ref": "paper.50",
+        "hex": "#FCFBF8"
       },
       "surface-accent": {
         "ref": "sunshine.400",
         "hex": "#FFD86C"
       },
       "scrim": {
-        "ref": "midnight.900",
-        "hex": "#01001A"
+        "ref": "night.900",
+        "hex": "#0F1018"
       },
       "text-strong": {
         "ref": "white",
@@ -444,23 +504,23 @@ export const tokens = {
       },
       "text-primary": {
         "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "hex": "#F6F4F0"
       },
       "text-secondary": {
-        "ref": "midnight.100",
-        "hex": "#D7DCF9"
+        "ref": "night.200",
+        "hex": "#C9CAD4"
       },
       "text-placeholder": {
-        "ref": "midnight.200",
-        "hex": "#9AA5EB"
+        "ref": "night.300",
+        "hex": "#9C9DAB"
       },
       "text-inverse": {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
       "text-on-hero": {
-        "ref": "paper.900",
-        "hex": "#1E1B16"
+        "ref": "white",
+        "hex": "#FFFFFF"
       },
       "text-on-accent": {
         "ref": "paper.900",
@@ -476,19 +536,23 @@ export const tokens = {
       },
       "text-on-warm": {
         "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "hex": "#F6F4F0"
+      },
+      "text-on-mood": {
+        "ref": "paper.900",
+        "hex": "#1E1B16"
       },
       "border": {
         "ref": "paper.100",
-        "hex": "#FFEFC4"
+        "hex": "#F6F4F0"
       },
       "border-subtle": {
-        "ref": "midnight.300",
-        "hex": "#2C2891"
+        "ref": "night.600",
+        "hex": "#333443"
       },
       "border-input": {
-        "ref": "midnight.100",
-        "hex": "#D7DCF9"
+        "ref": "night.300",
+        "hex": "#9C9DAB"
       },
       "focus-ring": {
         "ref": "sunshine.400",
@@ -499,8 +563,8 @@ export const tokens = {
         "hex": "#1E1B16"
       },
       "shadow": {
-        "ref": "sunshine.800",
-        "hex": "#6D4700"
+        "ref": "black",
+        "hex": "#000000"
       },
       "success": {
         "ref": "sunshine.400",
@@ -539,8 +603,8 @@ export const tokens = {
         "hex": "#FF9181"
       },
       "info": {
-        "ref": "midnight.300",
-        "hex": "#2C2891"
+        "ref": "night.600",
+        "hex": "#333443"
       },
       "on-info": {
         "ref": "white",
@@ -551,28 +615,28 @@ export const tokens = {
         "hex": "#D7DCF9"
       },
       "mood-hyped": {
-        "ref": "sunshine.400",
-        "hex": "#FFD86C"
+        "ref": "sunshine.300",
+        "hex": "#FFE19E"
       },
       "mood-okay": {
+        "ref": "sunshine.100",
+        "hex": "#FFF4D4"
+      },
+      "mood-soft": {
+        "ref": "paper.100",
+        "hex": "#F6F4F0"
+      },
+      "mood-tired": {
+        "ref": "midnight.50",
+        "hex": "#F1F3FD"
+      },
+      "mood-chaotic": {
         "ref": "sunshine.200",
         "hex": "#FFEBBA"
       },
-      "mood-soft": {
-        "ref": "paper.200",
-        "hex": "#EEDEBB"
-      },
-      "mood-tired": {
+      "mood-heavy": {
         "ref": "midnight.100",
         "hex": "#D7DCF9"
-      },
-      "mood-chaotic": {
-        "ref": "sunshine.500",
-        "hex": "#EBB443"
-      },
-      "mood-heavy": {
-        "ref": "midnight.200",
-        "hex": "#9AA5EB"
       }
     }
   },
@@ -743,32 +807,32 @@ export const tokens = {
       "text"
     ],
     [
-      "text-on-hero",
+      "text-on-mood",
       "mood-hyped",
       "text"
     ],
     [
-      "text-on-hero",
+      "text-on-mood",
       "mood-okay",
       "text"
     ],
     [
-      "text-on-hero",
+      "text-on-mood",
       "mood-soft",
       "text"
     ],
     [
-      "text-on-hero",
+      "text-on-mood",
       "mood-tired",
       "text"
     ],
     [
-      "text-on-hero",
+      "text-on-mood",
       "mood-chaotic",
       "text"
     ],
     [
-      "text-on-hero",
+      "text-on-mood",
       "mood-heavy",
       "text"
     ],
@@ -918,58 +982,22 @@ export const tokens = {
       "use": "Form labels, buttons (sm), tabs."
     },
     "caption": {
-      "size": "0.8125rem",
+      "size": "0.75rem",
       "lh": "1.4",
-      "ls": "0.01em",
+      "ls": "0.06em",
       "font": "sans",
-      "weight": 500,
-      "use": "Zine caption: Archivo condensed italic (wdth 62)."
-    },
-    "brush-xl": {
-      "size": "clamp(2.25rem, 1.7rem + 2.4vw, 3.75rem)",
-      "lh": "1",
-      "ls": "0",
-      "font": "brush",
-      "weight": 400,
-      "use": "Affirmation posters (≤6 words)."
-    },
-    "brush-lg": {
-      "size": "clamp(1.625rem, 1.4rem + 1vw, 2.25rem)",
-      "lh": "1.05",
-      "ls": "0",
-      "font": "brush",
-      "weight": 400,
-      "use": "Stickers, annotations."
-    },
-    "brush-md": {
-      "size": "1.375rem",
-      "lh": "1.1",
-      "ls": "0.01em",
-      "font": "brush",
-      "weight": 400,
-      "use": "Small stickers, badges. Brush minimum size."
+      "weight": 650,
+      "use": "Kicker / meta label: Archivo, uppercase, tracked."
     }
   },
   "fonts": {
     "display": {
       "value": "'Anton', 'Impact', 'Arial Narrow Bold', sans-serif",
-      "role": "Loud Display. Headlines, shouting, posters. Always uppercase."
-    },
-    "brush": {
-      "value": "'Permanent Marker', 'Comic Sans MS', cursive",
-      "role": "Hand-drawn Brush. Stickers, annotations, 1 to 6 words. Never body copy."
+      "role": "Display. Short headlines only, always uppercase."
     },
     "sans": {
       "value": "'Archivo', ui-sans-serif, system-ui, sans-serif",
-      "role": "Quiet Workhorse. UI, body, forms. Condensed italic (wdth 62) for zine captions."
-    },
-    "poster": {
-      "value": "'Bricolage Grotesque', 'Archivo', sans-serif",
-      "role": "Optional poster display. Hero and campaign moments only."
-    },
-    "mono": {
-      "value": "ui-monospace, 'SF Mono', Menlo, monospace",
-      "role": "Timestamps, codes. Rare."
+      "role": "Everything else: UI, body, labels, stickers, captions."
     }
   },
   "space": {

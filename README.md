@@ -17,7 +17,7 @@ npm run build      # tokens → contrast gate → typecheck → production build
 |---|---|---|
 | `design-tokens/source.mjs` | **The token source.** Seeds, scale curves, semantic maps, type, space, motion. | ✅ yes, start here |
 | `design-tokens/tokens.json` | W3C Design Tokens (DTCG) output, for Figma Tokens Studio, Style Dictionary and other tools | ❌ generated |
-| `design-tokens/build/tokens.css` | CSS custom properties (`--rd-*`), light + dark + reduced-motion + plain-brush | ❌ generated |
+| `design-tokens/build/tokens.css` | CSS custom properties (`--rd-*`), light + dark + reduced-motion | ❌ generated |
 | `design-tokens/build/theme.css` | Tailwind **v4** `@theme` mapping | ❌ generated |
 | `design-tokens/build/tailwind.config.js` | Tailwind **v3** preset (same tokens) | ❌ generated |
 | `design-tokens/build/tokens.ts` | Typed JS export (scales, semantic hexes, type scale…) | ❌ generated |
@@ -40,7 +40,7 @@ npm run build      # tokens → contrast gate → typecheck → production build
 .thing { background: var(--rd-bg-hero); color: var(--rd-text-on-hero); box-shadow: var(--rd-shadow-md); }
 ```
 
-Theme with `data-theme="light|dark"` on `<html>`. Leave it off to follow the OS. Users can override motion with `data-motion="reduced|full"`, and `data-brush="plain"` swaps the brush font for a dyslexia-friendly one.
+Theme with `data-theme="light|dark"` on `<html>`. Leave it off to follow the OS. Users can override motion with `data-motion="reduced|full"`.
 
 ### 2. Components (React)
 
