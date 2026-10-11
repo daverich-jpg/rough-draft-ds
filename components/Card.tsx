@@ -22,7 +22,7 @@ export function Card({
   flat?: boolean;
   /** Sharp corners: editorial / poster content. */
   zine?: boolean;
-  tape?: boolean | 'lime' | 'yellow';
+  tape?: boolean | 'yellow';
   grain?: boolean;
   tilt?: -3 | -2 | -1 | 0 | 1 | 2 | 3;
   as?: 'div' | 'article' | 'section' | 'li';
@@ -131,7 +131,7 @@ export function ZineCard({
   quote: string;
   body?: string;
   by?: string;
-  color?: 'yellow' | 'cream' | 'lime' | 'white' | 'ink';
+  color?: 'yellow' | 'cream' | 'navy' | 'white' | 'ink';
   voice?: 'display' | 'brush';
   tilt?: -3 | -2 | -1 | 0 | 1 | 2 | 3;
   tape?: boolean;

@@ -55,7 +55,7 @@ export function Brand() {
             </span>
             <div role="meter" aria-label={`${l} to ${r}`} aria-valuemin={1} aria-valuemax={10} aria-valuenow={v} aria-valuetext={`${v} out of 10 toward ${r}`} style={{ position: 'relative', height: 14, borderRadius: 999, background: 'var(--rd-surface-sunken)' }}>
               <span style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: `${(v - 1) * 11.1}%`, background: 'var(--rd-bg-hero)', borderRadius: 999 }} />
-              <span style={{ position: 'absolute', top: '50%', left: `${(v - 1) * 11.1}%`, translate: '-50% -50%', width: 24, height: 24, rotate: '45deg', background: 'var(--rd-spark-400)' }} />
+              <span style={{ position: 'absolute', top: '50%', left: `${(v - 1) * 11.1}%`, translate: '-50% -50%', width: 24, height: 24, rotate: '45deg', background: 'var(--rd-sunshine-400)' }} />
             </div>
             <span className="rd-body-sm" style={{ fontWeight: 750, color: 'var(--rd-text-strong)' }}>
               {r}

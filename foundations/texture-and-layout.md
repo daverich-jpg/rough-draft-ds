@@ -6,10 +6,10 @@
 |---|---|---|---|
 | `.rd-grain` | Photocopy grain | SVG `feTurbulence` noise as `::after`, multiply at 16% | Hero surfaces, zine cards, posters. Not on forms |
 | `.rd-halftone` | Halftone dots | `radial-gradient`, 7px grid; `--rd-halftone-bg` / `--rd-halftone-ink` | Behind display type, poster blocks |
-| `.rd-stripes` | Hazard stripes | `repeating-linear-gradient(-45deg…)`, lime/ink (`--soft` = yellow) | Edges, content-note covers, "under construction" |
+| `.rd-stripes` | Hazard stripes | `repeating-linear-gradient(-45deg…)`, yellow/navy (`--soft` = two yellows) | Edges, content-note covers, "under construction" |
 | `.rd-tape` | Tape strip | `::before`, translucent, torn ends via `clip-path`; `--rd-tape-x/-rot/-color` | Pinning cards. One per card. **Taped = flat: no shadow, no hover lift** (enforced in CSS) |
 | `.rd-torn` | Torn bottom edge | `clip-path` polygon | Hero block bottoms |
-| `.rd-overprint` + `.rd-overprint__ink[data-ink]` | Riso overprint | Grey halftone plate + lime copy offset 4px/−3px, `mix-blend-mode: multiply` | Campaign moments |
+| `.rd-overprint` + `.rd-overprint__ink[data-ink]` | Riso overprint | Yellow halftone plate + navy copy, misregistered navy-tint copy offset 4px/−3px, `mix-blend-mode: multiply` | Campaign moments |
 | `.rd-die-cut` | White sticker outline | Stacked `drop-shadow`s | Photos, illustrations |
 | `.rd-lined` | Notebook lines | `linear-gradient` in `background-attachment: local` | Journal textareas |
 

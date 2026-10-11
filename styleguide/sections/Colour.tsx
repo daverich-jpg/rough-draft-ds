@@ -16,13 +16,12 @@ export const ratio = (a: string, b: string) => {
 };
 
 const CORE: Array<[string, string, string]> = [
-  ['Sunshine Yellow', '#FFD86C', 'hero'],
-  ['Paper White', '#FFFFFF', 'breathing room'],
-  ['Cream', '#FFEFC4', 'canvas'],
-  ['Deep Brown', '#433100', 'grounding'],
-  ['Midnight Navy', '#090446', 'depth'],
-  ['Spark Lime', '#B6F500', 'spark <5%'],
-  ['Ink', '#1E1B16', 'headlines'],
+  ['Sunshine Yellow', '#FFD86C', 'key colour 1 · hero'],
+  ['Midnight Navy', '#090446', 'key colour 2 · depth'],
+  ['Cream', '#FFEFC4', 'neutral · canvas'],
+  ['Paper White', '#FFFFFF', 'neutral · raised'],
+  ['Ink', '#1E1B16', 'neutral · text'],
+  ['Error Red', '#BE2514', 'functional · errors only'],
 ];
 
 const Swatch = ({ hex, step, pinned, oklch }: { hex: string; step: string; pinned: boolean; oklch: string }) => {
@@ -48,12 +47,12 @@ export function Colour() {
       title="Colour"
       lede={
         <>
-          Yellow is the hero. Navy and brown do the heavy lifting. Lime is a spark, <strong>under 5% of any screen</strong>. Scales are generated in OKLCH. Brand hexes are pinned exactly (●), and everything else is computed and gamut-mapped.
+          <strong>Two key colours: Sunshine Yellow and Midnight Navy.</strong> Yellow is the hero; navy does the heavy lifting. Cream, white and ink are quiet neutrals, and red appears only for errors. Scales are generated in OKLCH. Brand hexes are pinned exactly (●), and everything else is computed and gamut-mapped.
         </>
       }
     >
       <H3>Core palette</H3>
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-0" style={{ boxShadow: 'var(--rd-shadow-md)' }}>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-0" style={{ boxShadow: 'var(--rd-shadow-md)' }}>
         {CORE.map(([n, h, r]) => (
           <div key={n} style={{ background: h, color: lum(h) < 0.25 ? '#fff' : '#1E1B16', padding: 14, minHeight: 150, display: 'grid', alignContent: 'end', gap: 2 }}>
             <span style={{ fontWeight: 800 }}>{n}</span>
@@ -65,7 +64,7 @@ export function Colour() {
         ))}
       </div>
       <p className="sg-note">
-        <Flag>flagged</Flag> The board labels the white swatch "FFD86C" and the navy swatch "433100". Sampling gave #FFFFFF and #0A0345. Navy is set to the brief's #090446. Spark Lime #B6F500 (OKLCH L 0.894) matches Sunshine's lightness (0.895). The printed poster sampled at #BCDA0C, which is the riso-on-grey reading of it.
+        <Flag>flagged</Flag> The board labels the white swatch "FFD86C" and the navy swatch "433100". Sampling gave #FFFFFF and #0A0345. Navy is set to the brief's #090446. The pair is the board's own: yellow on navy reads 13.7:1.
       </p>
 
       <H3>Tonal scales</H3>
@@ -85,7 +84,7 @@ export function Colour() {
         ))}
       </div>
       <p className="sg-note">
-        <Flag>decision</Flag> Light anchors (yellow, lime) pin at 400 and dark anchors (brown, navy) pin at 500, so both sides of the ramp stay usable. Cream and ink are the two ends of one "paper" ramp (100 and 900). Sneaker red, shades pink and inside-out blue are extended colours pulled from the board's imagery, and are used for semantic and mood colours only.
+        <Flag>decision</Flag> Yellow pins at 400 and navy at 500, so both sides of each ramp stay usable. Cream and ink are the two ends of one "paper" ramp (100 and 900). Status and mood colours are tints of the two key colours; Error Red is the only exception. Lime, brown, pink and blue were removed (D21). Green survives only inside the character illustrations.
       </p>
 
       <H3>Semantic tokens</H3>
@@ -156,11 +155,12 @@ export function Colour() {
           <strong>Yellow on white = 1.37:1. Never for text or icons.</strong> Yellow is a surface. Put ink on it (12.5:1).
         </li>
         <li>
-          <strong>Lime is a fill, never text on light.</strong> It covers under 5% of a screen: one sticker, one highlight, the check-in button.
+          <strong>Only two brand colours on any screen: yellow and navy.</strong> Neutrals fill the rest. If you're reaching for a third colour, use a tint of one of the two instead.
         </li>
-        <li>Body text on cream is Deep Brown (11:1, AAA). Headlines are Ink.</li>
-        <li>Dark mode is navy-led, with brown as the warm accent surface. It's designed, not inverted: focus rings switch to lime and links to lime-300.</li>
-        <li>Moods use their own fills, and the text on them is always ink. Colour is never the only signal; every mood also has a face and a word.</li>
+        <li>Red is functional: errors and destructive actions only. Never decorative.</li>
+        <li>Body text on cream is warm ink (paper-800). Headlines are Ink.</li>
+        <li>Dark mode is navy-led. It's designed, not inverted: the accent flips to yellow, focus rings and links go yellow, and sticker shadows become a deep yellow shade.</li>
+        <li>Moods are tints of the two key colours, and the text on them is always ink. Colour is never the only signal; every mood also has a face and a word.</li>
       </ul>
     </Section>
   );

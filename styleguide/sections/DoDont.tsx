@@ -41,13 +41,14 @@ export function DoDont() {
             </div>
           }
           bad={
-            <div style={{ display: 'grid', gap: 6, background: 'var(--rd-spark-400)', padding: 12, width: '100%' }}>
-              <span className="rd-display rd-display-sm" style={{ color: 'var(--rd-paper-900)' }}>Your drafts</span>
-              <span style={{ background: 'var(--rd-spark-300)', color: 'var(--rd-spark-500)', padding: 6 }}>lime everywhere</span>
+            <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
+              <span className="rd-display rd-display-sm" style={{ color: '#7c3aed' }}>Your drafts</span>
+              <span style={{ background: '#22c55e', color: '#fff', padding: '4px 10px', borderRadius: 99, fontWeight: 700 }}>3 new</span>
+              <span style={{ background: '#f472b6', color: '#fff', padding: '4px 10px', borderRadius: 99, fontWeight: 700 }}>hot</span>
             </div>
           }
-          goodWhy="Lime is a spark: one sticker, under 5% of the screen."
-          badWhy="Lime as a surface turns a spark into a hazard sign."
+          goodWhy="Two key colours: yellow and navy, plus neutrals. That's the whole palette."
+          badWhy="Every extra colour shouts over the others. Use a tint of yellow or navy instead."
         />
         <Pair
           good={

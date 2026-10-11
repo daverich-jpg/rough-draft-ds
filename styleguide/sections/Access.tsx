@@ -3,7 +3,7 @@ import { Section, Code } from '../ui';
 
 const ITEMS = [
   ['Contrast', 'Every semantic text pair passes AA in both themes, and body text is AAA. The build fails if a token change breaks one (npm run contrast).'],
-  ['Focus', 'Two-tone ring (3px ring + 2px halo) on everything focusable. The halo keeps focus visible on yellow, lime and navy, in both themes.'],
+  ['Focus', 'Two-tone ring (3px ring + 2px halo) on everything focusable. The halo keeps focus visible on yellow, cream and navy, in both themes.'],
   ['Targets', '44px minimum, everywhere. Tag remove buttons get an invisible 44px hit area. Checkbox and radio rows are the whole label.'],
   ['Screen readers', 'Real labels, aria-describedby for hints and errors, aria-pressed chips, role=switch toggles, native <dialog>, two toast live regions. Stickers are aria-hidden by default.'],
   ['Not colour alone', 'Errors have an icon and text. Disabled is flat (no shadow) and muted; disabled inputs are dashed. Selected chips get a check. Moods have a face and a word.'],

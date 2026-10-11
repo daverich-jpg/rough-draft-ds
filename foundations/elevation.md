@@ -11,7 +11,7 @@ Hard offset **sticker shadows**: the way a sticker sits on paper. **No blur, eve
 | `shadow-lg` | 8px 8px 0 | Modals, zine cards |
 | `shadow-xl` | 12px 12px 0 | Posters only |
 
-The shadow colour is the `shadow` semantic token: **ink** in light mode, **warm brown** (`bark-400`) in dark mode, so the offset stays visible on navy.
+The shadow colour is the `shadow` semantic token: **ink** in light mode, **deep yellow** (`sunshine-800`) in dark mode, so the offset stays visible on navy.
 
 ## Taped = flat
 

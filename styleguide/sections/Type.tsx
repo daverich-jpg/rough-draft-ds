@@ -64,7 +64,7 @@ export function Type() {
           </p>
         </div>
         <div className="sg-stage rd-stripes" style={{ display: 'grid', placeItems: 'center' }}>
-          <p className="rd-poster" style={{ fontSize: 'clamp(3rem, 9vw, 6rem)', color: 'var(--rd-paper-900)', background: 'var(--rd-spark-400)', padding: '0 12px' }}>
+          <p className="rd-poster" style={{ fontSize: 'clamp(3rem, 9vw, 6rem)', color: 'var(--rd-paper-900)', background: 'var(--rd-sunshine-400)', padding: '0 12px' }}>
             art+
           </p>
         </div>

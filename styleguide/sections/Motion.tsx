@@ -25,7 +25,7 @@ export function Motion() {
         {DEMOS.map(([name, cls, label, use]) => (
           <div key={name} className="sg-stage" style={{ display: 'grid', gap: 12, justifyItems: 'center', textAlign: 'center' }}>
             <div style={{ height: 80, display: 'grid', placeItems: 'center' }}>
-              <Sticker key={runs[name] ?? 0} className={runs[name] ? cls : undefined} tilt={-2} color={name === 'stamp' ? 'yellow' : 'lime'}>
+              <Sticker key={runs[name] ?? 0} className={runs[name] ? cls : undefined} tilt={-2} color={name === 'stamp' ? 'navy' : 'yellow'}>
                 {label}
               </Sticker>
             </div>
@@ -48,7 +48,7 @@ export function Motion() {
                 </td>
                 <td style={{ fontFamily: 'var(--rd-font-mono)' }}>{v.value}</td>
                 <td style={{ width: '40%' }}>
-                  <span style={{ display: 'block', height: 10, width: `${Math.min(100, parseInt(v.value) / 9)}%`, background: parseInt(v.value) <= 300 ? 'var(--rd-bg-hero)' : 'var(--rd-shades-300)', borderRadius: 99 }} />
+                  <span style={{ display: 'block', height: 10, width: `${Math.min(100, parseInt(v.value) / 9)}%`, background: parseInt(v.value) <= 300 ? 'var(--rd-bg-hero)' : 'var(--rd-sunshine-200)', borderRadius: 99 }} />
                 </td>
                 <td className="rd-body-sm">{v.use}</td>
               </tr>
@@ -91,7 +91,7 @@ function EaseDemo({ name, value, use }: { name: string; value: string; use: stri
               width: 28,
               height: 28,
               borderRadius: '50%',
-              background: 'var(--rd-spark-400)',
+              background: 'var(--rd-sunshine-400)',
 
               translate: on ? 'calc(var(--w, 140px)) 0' : '0 0',
               transition: `translate 700ms ${value}`,

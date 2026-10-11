@@ -5,10 +5,10 @@ import { Section, H3, Code } from '../ui';
 const TEX = [
   ['rd-grain', 'Photocopy grain', 'SVG fractal noise, multiply. Hero surfaces, zine cards, posters. Not on forms.'],
   ['rd-halftone', 'Halftone', 'Radial-gradient dots. Behind display type, poster blocks.'],
-  ['rd-stripes', 'Hazard stripes', 'Lime/ink diagonal. Edges, "under construction", content-note covers (soft variant).'],
+  ['rd-stripes', 'Hazard stripes', 'Yellow/navy diagonal. Edges, "under construction", content-note covers (soft variant).'],
   ['rd-tape', 'Tape strip', 'Pseudo-element with torn ends. One per card, max. Taped = flat: no shadow.'],
   ['rd-torn', 'Torn edge', 'Clip-path. Bottom edges of hero blocks.'],
-  ['rd-overprint', 'Riso overprint', 'Lime ink, misregistered over a grey halftone plate. Campaign only.'],
+  ['rd-overprint', 'Riso overprint', 'Navy ink, misregistered over a yellow halftone plate. Campaign only.'],
 ];
 
 export function Texture() {
@@ -61,7 +61,7 @@ export function Texture() {
 
           borderRadius: 4,
           background: grid
-            ? 'repeating-linear-gradient(90deg, color-mix(in oklch, var(--rd-insideout-300) 22%, transparent) 0 calc((100% - 11 * 24px) / 12), transparent 0 calc((100% - 11 * 24px) / 12 + 24px)), repeating-linear-gradient(0deg, color-mix(in oklch, var(--rd-insideout-300) 30%, transparent) 0 1px, transparent 1px 8px), var(--rd-surface)'
+            ? 'repeating-linear-gradient(90deg, color-mix(in oklch, var(--rd-midnight-200) 22%, transparent) 0 calc((100% - 11 * 24px) / 12), transparent 0 calc((100% - 11 * 24px) / 12 + 24px)), repeating-linear-gradient(0deg, color-mix(in oklch, var(--rd-midnight-200) 30%, transparent) 0 1px, transparent 1px 8px), var(--rd-surface)'
             : 'var(--rd-surface)',
           backgroundOrigin: 'content-box',
         }}
@@ -73,7 +73,7 @@ export function Texture() {
           <Character kind="moss" mood="soft" width={130} />
         </div>
         <div className="col-span-3 md:col-span-4 grid content-start gap-4" style={{ paddingTop: 24 }}>
-          <Sticker color="pink" tilt={3}>
+          <Sticker color="cream" tilt={3}>
             sadness from inside out
           </Sticker>
           <Sticker color="yellow" tilt={-1}>

@@ -41,22 +41,22 @@ export function Tag({ children, onRemove, color, className }: { children: ReactN
 }
 
 /** Small count/status pill. Pass `label` when the number alone is ambiguous. */
-export function Badge({ children, tone = 'spark', label, className }: { children: ReactNode; tone?: 'spark' | 'hero' | 'ink' | 'error'; label?: string; className?: string }) {
+export function Badge({ children, tone = 'accent', label, className }: { children: ReactNode; tone?: 'accent' | 'hero' | 'ink' | 'error'; label?: string; className?: string }) {
   return (
-    <span className={cx('rd-badge', tone !== 'spark' && `rd-badge--${tone}`, className)} aria-label={label}>
+    <span className={cx('rd-badge', tone !== 'accent' && `rd-badge--${tone}`, className)} aria-label={label}>
       {children}
     </span>
   );
 }
 
-export type StickerColor = 'lime' | 'yellow' | 'pink' | 'blue' | 'white';
+export type StickerColor = 'yellow' | 'navy' | 'cream' | 'white';
 /**
  * Die-cut sticker. Brush voice, 1–6 words. Decorative by default (aria-hidden)
  * because stickers usually repeat what's nearby; pass `announce` if it's the only place the info lives.
  */
 export function Sticker({
   children,
-  color = 'lime',
+  color = 'yellow',
   shape = 'tag',
   tilt = -3,
   announce,
@@ -66,7 +66,7 @@ export function Sticker({
 }: HTMLAttributes<HTMLSpanElement> & { color?: StickerColor; shape?: 'tag' | 'round' | 'burst'; tilt?: -3 | -2 | -1 | 0 | 1 | 2 | 3; announce?: boolean }) {
   return (
     <span
-      className={cx('rd-sticker', color !== 'lime' && `rd-sticker--${color}`, shape !== 'tag' && `rd-sticker--${shape}`, className)}
+      className={cx('rd-sticker', color !== 'yellow' && `rd-sticker--${color}`, shape !== 'tag' && `rd-sticker--${shape}`, className)}
       style={{ '--rd-rot': `${tilt}deg`, ...style } as CSSProperties}
       aria-hidden={announce ? undefined : true}
       {...rest}

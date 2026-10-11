@@ -57,118 +57,6 @@ export const tokens = {
         }
       }
     },
-    "spark": {
-      "label": "Spark Lime",
-      "role": "Accent. Bursts only, under 5% of any screen. Never text on light.",
-      "steps": {
-        "50": {
-          "hex": "#F5FFE3",
-          "oklch": "oklch(98.5% 0.038 123.1)",
-          "pinned": false
-        },
-        "100": {
-          "hex": "#E7FFC3",
-          "oklch": "oklch(96.8% 0.082 125.6)",
-          "pinned": false
-        },
-        "200": {
-          "hex": "#D6FF98",
-          "oklch": "oklch(94.8% 0.137 126.6)",
-          "pinned": false
-        },
-        "300": {
-          "hex": "#C0FE60",
-          "oklch": "oklch(92.5% 0.196 128.0)",
-          "pinned": false
-        },
-        "400": {
-          "hex": "#B6F500",
-          "oklch": "oklch(89.4% 0.228 126.2)",
-          "pinned": true
-        },
-        "500": {
-          "hex": "#8DD71E",
-          "oklch": "oklch(80.0% 0.210 130.7)",
-          "pinned": false
-        },
-        "600": {
-          "hex": "#6CAE15",
-          "oklch": "oklch(68.0% 0.182 131.9)",
-          "pinned": false
-        },
-        "700": {
-          "hex": "#4B830E",
-          "oklch": "oklch(55.0% 0.151 133.4)",
-          "pinned": false
-        },
-        "800": {
-          "hex": "#2E5A05",
-          "oklch": "oklch(41.9% 0.118 134.7)",
-          "pinned": false
-        },
-        "900": {
-          "hex": "#163700",
-          "oklch": "oklch(30.0% 0.089 136.1)",
-          "pinned": false
-        }
-      }
-    },
-    "bark": {
-      "label": "Deep Brown",
-      "role": "Grounding. Warm body text and dark warm surfaces.",
-      "steps": {
-        "50": {
-          "hex": "#FEF4E1",
-          "oklch": "oklch(97.0% 0.027 83.5)",
-          "pinned": false
-        },
-        "100": {
-          "hex": "#F5E2C0",
-          "oklch": "oklch(92.0% 0.049 82.2)",
-          "pinned": false
-        },
-        "200": {
-          "hex": "#E1C797",
-          "oklch": "oklch(84.0% 0.069 82.6)",
-          "pinned": false
-        },
-        "300": {
-          "hex": "#B99A5E",
-          "oklch": "oklch(70.1% 0.087 83.0)",
-          "pinned": false
-        },
-        "400": {
-          "hex": "#76581A",
-          "oklch": "oklch(48.0% 0.086 81.6)",
-          "pinned": false
-        },
-        "500": {
-          "hex": "#433100",
-          "oklch": "oklch(32.5% 0.066 86.2)",
-          "pinned": true
-        },
-        "600": {
-          "hex": "#372500",
-          "oklch": "oklch(27.9% 0.058 81.0)",
-          "pinned": false
-        },
-        "700": {
-          "hex": "#2B1C00",
-          "oklch": "oklch(23.9% 0.049 80.6)",
-          "pinned": false
-        },
-        "800": {
-          "hex": "#201300",
-          "oklch": "oklch(19.9% 0.042 78.0)",
-          "pinned": false
-        },
-        "900": {
-          "hex": "#150B00",
-          "oklch": "oklch(16.0% 0.033 77.5)",
-          "pinned": false
-        }
-      }
-    },
     "midnight": {
       "label": "Midnight Navy",
       "role": "Depth. Night mode, high-contrast moments.",
@@ -282,8 +170,8 @@ export const tokens = {
       }
     },
     "sneaker": {
-      "label": "Sneaker Red",
-      "role": "Errors and destructive actions. The red of the sticker sneakers.",
+      "label": "Error Red",
+      "role": "Functional only: errors and destructive actions. Never decorative.",
       "steps": {
         "50": {
           "hex": "#FFF2F0",
@@ -336,118 +224,6 @@ export const tokens = {
           "pinned": false
         }
       }
-    },
-    "shades": {
-      "label": "Shades Pink",
-      "role": "Mood: soft. From the pink sunglasses.",
-      "steps": {
-        "50": {
-          "hex": "#FFF3F7",
-          "oklch": "oklch(97.5% 0.014 355.0)",
-          "pinned": false
-        },
-        "100": {
-          "hex": "#FFE2EC",
-          "oklch": "oklch(93.9% 0.034 354.9)",
-          "pinned": false
-        },
-        "200": {
-          "hex": "#FFC5D9",
-          "oklch": "oklch(88.1% 0.071 356.1)",
-          "pinned": false
-        },
-        "300": {
-          "hex": "#FF9ABF",
-          "oklch": "oklch(80.0% 0.127 356.9)",
-          "pinned": false
-        },
-        "400": {
-          "hex": "#FD77AC",
-          "oklch": "oklch(74.1% 0.172 357.2)",
-          "pinned": false
-        },
-        "500": {
-          "hex": "#E45992",
-          "oklch": "oklch(66.0% 0.180 357.8)",
-          "pinned": false
-        },
-        "600": {
-          "hex": "#BC4073",
-          "oklch": "oklch(56.0% 0.165 358.6)",
-          "pinned": false
-        },
-        "700": {
-          "hex": "#932B56",
-          "oklch": "oklch(46.0% 0.144 359.2)",
-          "pinned": false
-        },
-        "800": {
-          "hex": "#6D1D3E",
-          "oklch": "oklch(37.0% 0.116 359.3)",
-          "pinned": false
-        },
-        "900": {
-          "hex": "#490F27",
-          "oklch": "oklch(27.9% 0.090 359.7)",
-          "pinned": false
-        }
-      }
-    },
-    "insideout": {
-      "label": "Inside-Out Blue",
-      "role": "Info and the \"heavy\" mood. From the blue-screen screenshot.",
-      "steps": {
-        "50": {
-          "hex": "#F1F5FF",
-          "oklch": "oklch(97.0% 0.014 268.5)",
-          "pinned": false
-        },
-        "100": {
-          "hex": "#DEE8FF",
-          "oklch": "oklch(93.0% 0.033 266.9)",
-          "pinned": false
-        },
-        "200": {
-          "hex": "#BED0FF",
-          "oklch": "oklch(86.0% 0.068 268.5)",
-          "pinned": false
-        },
-        "300": {
-          "hex": "#95B1FF",
-          "oklch": "oklch(77.0% 0.117 268.5)",
-          "pinned": false
-        },
-        "400": {
-          "hex": "#6A8CFF",
-          "oklch": "oklch(67.0% 0.174 269.0)",
-          "pinned": false
-        },
-        "500": {
-          "hex": "#4967E2",
-          "oklch": "oklch(56.1% 0.190 269.1)",
-          "pinned": false
-        },
-        "600": {
-          "hex": "#374FC1",
-          "oklch": "oklch(48.0% 0.180 269.3)",
-          "pinned": false
-        },
-        "700": {
-          "hex": "#283A9D",
-          "oklch": "oklch(40.1% 0.161 269.6)",
-          "pinned": false
-        },
-        "800": {
-          "hex": "#1D2A78",
-          "oklch": "oklch(32.9% 0.133 270.0)",
-          "pinned": false
-        },
-        "900": {
-          "hex": "#101953",
-          "oklch": "oklch(25.0% 0.105 269.9)",
-          "pinned": false
-        }
-      }
     }
   },
   "semantic": {
@@ -480,9 +256,9 @@ export const tokens = {
         "ref": "midnight.500",
         "hex": "#090446"
       },
-      "surface-spark": {
-        "ref": "spark.400",
-        "hex": "#B6F500"
+      "surface-accent": {
+        "ref": "midnight.500",
+        "hex": "#090446"
       },
       "scrim": {
         "ref": "midnight.500",
@@ -493,12 +269,12 @@ export const tokens = {
         "hex": "#1E1B16"
       },
       "text-primary": {
-        "ref": "bark.500",
-        "hex": "#433100"
+        "ref": "paper.800",
+        "hex": "#312D27"
       },
       "text-secondary": {
-        "ref": "bark.400",
-        "hex": "#76581A"
+        "ref": "paper.600",
+        "hex": "#635D50"
       },
       "text-placeholder": {
         "ref": "paper.600",
@@ -512,9 +288,9 @@ export const tokens = {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
-      "text-on-spark": {
-        "ref": "paper.900",
-        "hex": "#1E1B16"
+      "text-on-accent": {
+        "ref": "paper.100",
+        "hex": "#FFEFC4"
       },
       "text-on-inverse": {
         "ref": "paper.100",
@@ -537,8 +313,8 @@ export const tokens = {
         "hex": "#D6C9AC"
       },
       "border-input": {
-        "ref": "bark.500",
-        "hex": "#433100"
+        "ref": "paper.700",
+        "hex": "#474238"
       },
       "focus-ring": {
         "ref": "midnight.400",
@@ -553,16 +329,16 @@ export const tokens = {
         "hex": "#1E1B16"
       },
       "success": {
-        "ref": "spark.400",
-        "hex": "#B6F500"
+        "ref": "midnight.500",
+        "hex": "#090446"
       },
       "on-success": {
-        "ref": "paper.900",
-        "hex": "#1E1B16"
+        "ref": "paper.100",
+        "hex": "#FFEFC4"
       },
       "success-text": {
-        "ref": "spark.800",
-        "hex": "#2E5A05"
+        "ref": "midnight.400",
+        "hex": "#1A1664"
       },
       "warning": {
         "ref": "sunshine.400",
@@ -589,40 +365,40 @@ export const tokens = {
         "hex": "#9B1301"
       },
       "info": {
-        "ref": "insideout.100",
-        "hex": "#DEE8FF"
+        "ref": "midnight.50",
+        "hex": "#F1F3FD"
       },
       "on-info": {
         "ref": "midnight.500",
         "hex": "#090446"
       },
       "info-text": {
-        "ref": "insideout.700",
-        "hex": "#283A9D"
+        "ref": "midnight.400",
+        "hex": "#1A1664"
       },
       "mood-hyped": {
-        "ref": "spark.400",
-        "hex": "#B6F500"
-      },
-      "mood-okay": {
         "ref": "sunshine.400",
         "hex": "#FFD86C"
       },
+      "mood-okay": {
+        "ref": "sunshine.200",
+        "hex": "#FFEBBA"
+      },
       "mood-soft": {
-        "ref": "shades.200",
-        "hex": "#FFC5D9"
+        "ref": "paper.200",
+        "hex": "#EEDEBB"
       },
       "mood-tired": {
         "ref": "midnight.100",
         "hex": "#D7DCF9"
       },
       "mood-chaotic": {
-        "ref": "sneaker.300",
-        "hex": "#FF9181"
+        "ref": "sunshine.500",
+        "hex": "#EBB443"
       },
       "mood-heavy": {
-        "ref": "insideout.300",
-        "hex": "#95B1FF"
+        "ref": "midnight.200",
+        "hex": "#9AA5EB"
       }
     },
     "dark": {
@@ -647,16 +423,16 @@ export const tokens = {
         "hex": "#04002D"
       },
       "surface-warm": {
-        "ref": "bark.500",
-        "hex": "#433100"
+        "ref": "sunshine.900",
+        "hex": "#482C00"
       },
       "surface-inverse": {
         "ref": "paper.100",
         "hex": "#FFEFC4"
       },
-      "surface-spark": {
-        "ref": "spark.400",
-        "hex": "#B6F500"
+      "surface-accent": {
+        "ref": "sunshine.400",
+        "hex": "#FFD86C"
       },
       "scrim": {
         "ref": "midnight.900",
@@ -686,7 +462,7 @@ export const tokens = {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
-      "text-on-spark": {
+      "text-on-accent": {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
@@ -695,8 +471,8 @@ export const tokens = {
         "hex": "#1E1B16"
       },
       "text-link": {
-        "ref": "spark.300",
-        "hex": "#C0FE60"
+        "ref": "sunshine.300",
+        "hex": "#FFE19E"
       },
       "text-on-warm": {
         "ref": "paper.100",
@@ -715,28 +491,28 @@ export const tokens = {
         "hex": "#D7DCF9"
       },
       "focus-ring": {
-        "ref": "spark.400",
-        "hex": "#B6F500"
+        "ref": "sunshine.400",
+        "hex": "#FFD86C"
       },
       "focus-halo": {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
       "shadow": {
-        "ref": "bark.400",
-        "hex": "#76581A"
+        "ref": "sunshine.800",
+        "hex": "#6D4700"
       },
       "success": {
-        "ref": "spark.400",
-        "hex": "#B6F500"
+        "ref": "sunshine.400",
+        "hex": "#FFD86C"
       },
       "on-success": {
         "ref": "paper.900",
         "hex": "#1E1B16"
       },
       "success-text": {
-        "ref": "spark.300",
-        "hex": "#C0FE60"
+        "ref": "sunshine.300",
+        "hex": "#FFE19E"
       },
       "warning": {
         "ref": "sunshine.400",
@@ -763,40 +539,40 @@ export const tokens = {
         "hex": "#FF9181"
       },
       "info": {
-        "ref": "insideout.700",
-        "hex": "#283A9D"
+        "ref": "midnight.300",
+        "hex": "#2C2891"
       },
       "on-info": {
         "ref": "white",
         "hex": "#FFFFFF"
       },
       "info-text": {
-        "ref": "insideout.200",
-        "hex": "#BED0FF"
+        "ref": "midnight.100",
+        "hex": "#D7DCF9"
       },
       "mood-hyped": {
-        "ref": "spark.400",
-        "hex": "#B6F500"
-      },
-      "mood-okay": {
         "ref": "sunshine.400",
         "hex": "#FFD86C"
       },
+      "mood-okay": {
+        "ref": "sunshine.200",
+        "hex": "#FFEBBA"
+      },
       "mood-soft": {
-        "ref": "shades.300",
-        "hex": "#FF9ABF"
+        "ref": "paper.200",
+        "hex": "#EEDEBB"
       },
       "mood-tired": {
-        "ref": "midnight.200",
-        "hex": "#9AA5EB"
+        "ref": "midnight.100",
+        "hex": "#D7DCF9"
       },
       "mood-chaotic": {
-        "ref": "sneaker.300",
-        "hex": "#FF9181"
+        "ref": "sunshine.500",
+        "hex": "#EBB443"
       },
       "mood-heavy": {
-        "ref": "insideout.300",
-        "hex": "#95B1FF"
+        "ref": "midnight.200",
+        "hex": "#9AA5EB"
       }
     }
   },
@@ -912,8 +688,8 @@ export const tokens = {
       "text"
     ],
     [
-      "text-on-spark",
-      "surface-spark",
+      "text-on-accent",
+      "surface-accent",
       "text"
     ],
     [
@@ -1043,7 +819,7 @@ export const tokens = {
     ],
     [
       "focus-ring",
-      "surface-spark",
+      "surface-accent",
       "focus"
     ],
     [

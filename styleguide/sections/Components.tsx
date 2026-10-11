@@ -203,10 +203,10 @@ export function Components() {
             <Sticker color="yellow" tilt={2}>
               no one's grading
             </Sticker>
-            <Sticker color="pink" shape="round" tilt={-1}>
+            <Sticker color="cream" shape="round" tilt={-1}>
               soft day
             </Sticker>
-            <Sticker color="blue" tilt={1}>
+            <Sticker color="navy" tilt={1}>
               valid
             </Sticker>
             <Sticker color="white" shape="burst" tilt={0}>
@@ -266,7 +266,7 @@ export function Components() {
             { name: 'tired again', handle: '@tired.again', time: '2h', body: 'sadness from inside out', counts: { replies: 50, reposts: 186, likes: 2180 }, avatar: { name: 'tired again', character: 'doze', mood: 'heavy' } },
           ]}
         />
-        <ZineCard tilt={2} color="lime" quote="Cancel the plans." body="you're allowed. they'll survive. so will you." by="the editors" />
+        <ZineCard tilt={2} color="navy" quote="Cancel the plans." body="you're allowed. they'll survive. so will you." by="the editors" />
         <ZineCard voice="brush" color="white" tilt={-2} tape quote="you're allowed to be a work in progress and a masterpiece at the same time" />
       </div>
 
@@ -328,7 +328,7 @@ export function Components() {
             </div>
           </div>
         </Demo>
-        <Demo title="mobile tab bar" note="5 slots. Middle = check in (the only lime on the screen).">
+        <Demo title="mobile tab bar" note="5 slots. Middle = check in (the only filled accent on the screen).">
           <div style={{ maxWidth: 400, borderRadius: 16, overflow: 'hidden', paddingTop: 40, background: 'var(--rd-bg)' }}>
             <TabBar items={NAV} current={nav} primary="checkin" onNavigate={setNav} />
           </div>

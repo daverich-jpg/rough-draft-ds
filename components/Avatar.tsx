@@ -17,7 +17,7 @@ export type AvatarProps = {
   className?: string;
 };
 
-const BG = ['var(--rd-sunshine-300)', 'var(--rd-spark-300)', 'var(--rd-shades-200)', 'var(--rd-insideout-200)', 'var(--rd-bark-200)', 'var(--rd-midnight-100)'];
+const BG = ['var(--rd-sunshine-300)', 'var(--rd-sunshine-100)', 'var(--rd-midnight-100)', 'var(--rd-paper-200)', 'var(--rd-sunshine-200)', 'var(--rd-midnight-200)'];
 const hash = (s: string) => [...s].reduce((a, ch) => (a * 31 + ch.charCodeAt(0)) >>> 0, 7);
 
 export function Avatar({ name, src, character, mood = 'okay', size = 48, shape = 'circle', sticker, decorative, className }: AvatarProps) {

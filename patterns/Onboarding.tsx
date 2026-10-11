@@ -88,7 +88,7 @@ export function Onboarding({ onDone }: { onDone?: () => void }) {
           </div>
           <div role="radiogroup" aria-labelledby="ob-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
             {KINDS.map((k, i) => (
-              <label key={k} className="rd-mood" style={{ '--rd-mood-bg': ['var(--rd-sunshine-400)', 'var(--rd-midnight-100)', 'var(--rd-shades-200)', 'var(--rd-sneaker-200)'][i], '--rd-rot': `${[-2, 2, -1, 3][i]}deg` } as CSSProperties}>
+              <label key={k} className="rd-mood" style={{ '--rd-mood-bg': ['var(--rd-sunshine-400)', 'var(--rd-midnight-100)', 'var(--rd-sunshine-100)', 'var(--rd-sunshine-300)'][i], '--rd-rot': `${[-2, 2, -1, 3][i]}deg` } as CSSProperties}>
                 <input type="radio" name="editor" checked={editor === k} onChange={() => setEditor(k)} aria-label={`${CHARACTERS[k].name}: ${CHARACTERS[k].vibe}`} />
                 <span className="rd-mood__card" aria-hidden style={{ minHeight: 168 }}>
                   <Character kind={k} mood={k === 'doze' ? 'tired' : k === 'static' ? 'chaotic' : k === 'moss' ? 'soft' : 'hyped'} width={84} decorative dieCut={false} />

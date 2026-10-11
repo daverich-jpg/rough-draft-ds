@@ -111,7 +111,7 @@ export function Voice() {
                   )}
                 </td>
                 <td>
-                  <span className="rd-tag" style={{ background: ['', 'var(--rd-sunshine-400)', 'var(--rd-spark-300)', 'var(--rd-surface-sunken)', 'var(--rd-insideout-100)', 'var(--rd-insideout-200)'][m.tone], color: 'var(--rd-paper-900)' }}>
+                  <span className="rd-tag" style={{ background: ['', 'var(--rd-sunshine-400)', 'var(--rd-sunshine-300)', 'var(--rd-surface-sunken)', 'var(--rd-midnight-50)', 'var(--rd-midnight-100)'][m.tone], color: 'var(--rd-paper-900)' }}>
                     {m.tone} · {TONE_DIAL[m.tone - 1].name}
                   </span>
                 </td>

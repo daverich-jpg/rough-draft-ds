@@ -11,10 +11,10 @@ export const STEPS = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
  * multiplier (relative to the seed) and a hue at each end. `pins` hold exact
  * brand hexes; those steps are emitted verbatim, never recomputed.
  *
- * DECISION (flagged): the brief asks for base colours "pinned as the 400/500
- * anchors". Yellow and lime are very light (L≈0.89), so they pin at 400.
- * Brown and navy are very dark (L 0.33 / 0.19), so they pin at 500. Cream and
- * ink are the two ends of one warm-neutral "paper" ramp, so they pin at 100 and 900.
+ * TWO KEY COLOURS (D21): Sunshine Yellow + Midnight Navy carry all brand colour.
+ * Paper (cream → ink) is the neutral ramp. Error Red is functional only.
+ * Yellow is light (L≈0.89) so it pins at 400; navy is dark (L 0.19) so it pins
+ * at 500. Cream and ink are the two ends of the paper ramp (100 and 900).
  */
 export const SCALES = {
   sunshine: {
@@ -26,24 +26,8 @@ export const SCALES = {
     C: [0.25, 0.45, 0.7, 0.88, 1, 1.05, 0.98, 0.88, 0.74, 0.6],
     hue: [94, 72],
   },
-  spark: {
-    label: 'Spark Lime',
-    role: 'Accent. Bursts only, under 5% of any screen. Never text on light.',
-    seed: '#B6F500',
-    pins: { 400: '#B6F500' },
-    L: [0.985, 0.968, 0.948, 0.925, null, 0.8, 0.68, 0.55, 0.42, 0.3],
-    C: [0.22, 0.42, 0.66, 0.86, 1, 0.92, 0.8, 0.66, 0.52, 0.4],
-    hue: [124, 136],
-  },
-  bark: {
-    label: 'Deep Brown',
-    role: 'Grounding. Warm body text and dark warm surfaces.',
-    seed: '#433100',
-    pins: { 500: '#433100' },
-    L: [0.97, 0.92, 0.84, 0.7, 0.48, null, 0.28, 0.24, 0.2, 0.16],
-    C: [0.4, 0.75, 1.05, 1.3, 1.3, 1, 0.92, 0.85, 0.75, 0.65],
-    hue: [84, 80],
-  },
+
+
   midnight: {
     label: 'Midnight Navy',
     role: 'Depth. Night mode, high-contrast moments.',
@@ -63,33 +47,17 @@ export const SCALES = {
     absoluteC: [0.03, null, 0.05, 0.042, 0.032, 0.026, 0.021, 0.017, 0.013, null],
     hue: [90, 80],
   },
-  // Extended palette, pulled from the board's imagery (sneaker red, the pink
-  // sunglasses, the "Inside Out" blue screenshot). Used for semantic and mood
-  // colours only, never as brand colours. FLAGGED for review.
+  // Functional only: errors and destructive actions. Not a brand colour.
   sneaker: {
-    label: 'Sneaker Red',
-    role: 'Errors and destructive actions. The red of the sticker sneakers.',
+    label: 'Error Red',
+    role: 'Functional only: errors and destructive actions. Never decorative.',
     seed: 'oklch(0.6 0.2 30)',
     L: [0.97, 0.93, 0.86, 0.77, 0.68, 0.6, 0.52, 0.44, 0.36, 0.27],
     C: [0.12, 0.25, 0.5, 0.78, 0.95, 1, 0.95, 0.85, 0.7, 0.55],
     hue: [28, 32],
   },
-  shades: {
-    label: 'Shades Pink',
-    role: 'Mood: soft. From the pink sunglasses.',
-    seed: 'oklch(0.7 0.18 355)',
-    L: [0.975, 0.94, 0.88, 0.8, 0.74, 0.66, 0.56, 0.46, 0.37, 0.28],
-    C: [0.12, 0.25, 0.5, 0.78, 0.95, 1, 0.92, 0.8, 0.65, 0.5],
-    hue: [355, 0],
-  },
-  insideout: {
-    label: 'Inside-Out Blue',
-    role: 'Info and the "heavy" mood. From the blue-screen screenshot.',
-    seed: 'oklch(0.56 0.19 268)',
-    L: [0.97, 0.93, 0.86, 0.77, 0.67, 0.56, 0.48, 0.4, 0.33, 0.25],
-    C: [0.1, 0.22, 0.45, 0.72, 0.92, 1, 0.95, 0.85, 0.7, 0.55],
-    hue: [268, 270],
-  },
+
+
 };
 
 export const STATIC_COLORS = {
@@ -103,7 +71,6 @@ export const STATIC_COLORS = {
  */
 export const SEMANTIC = {
   light: {
-    // surfaces
     'bg': 'paper.100',
     'bg-hero': 'sunshine.400',
     'surface': 'paper.50',
@@ -111,46 +78,42 @@ export const SEMANTIC = {
     'surface-sunken': 'paper.200',
     'surface-warm': 'sunshine.200',
     'surface-inverse': 'midnight.500',
-    'surface-spark': 'spark.400',
+    'surface-accent': 'midnight.500',
     'scrim': 'midnight.500',
-    // text
     'text-strong': 'paper.900',
-    'text-primary': 'bark.500',
-    'text-secondary': 'bark.400',
+    'text-primary': 'paper.800',
+    'text-secondary': 'paper.600',
     'text-placeholder': 'paper.600',
     'text-inverse': 'paper.100',
     'text-on-hero': 'paper.900',
-    'text-on-spark': 'paper.900',
+    'text-on-accent': 'paper.100',
     'text-on-inverse': 'paper.100',
     'text-link': 'midnight.400',
     'text-on-warm': 'paper.900',
-    // lines
     'border': 'paper.900',
     'border-subtle': 'paper.300',
-    'border-input': 'bark.500',
+    'border-input': 'paper.700',
     'focus-ring': 'midnight.400',
     'focus-halo': 'paper.50',
     'shadow': 'paper.900',
-    // feedback (fill / text-on-fill / standalone text)
-    'success': 'spark.400',
-    'on-success': 'paper.900',
-    'success-text': 'spark.800',
+    'success': 'midnight.500',
+    'on-success': 'paper.100',
+    'success-text': 'midnight.400',
     'warning': 'sunshine.400',
     'on-warning': 'paper.900',
     'warning-text': 'sunshine.800',
     'error': 'sneaker.600',
     'on-error': 'white',
     'error-text': 'sneaker.700',
-    'info': 'insideout.100',
+    'info': 'midnight.50',
     'on-info': 'midnight.500',
-    'info-text': 'insideout.700',
-    // moods (fill colours; text on them is always text-on-hero/ink)
-    'mood-hyped': 'spark.400',
-    'mood-okay': 'sunshine.400',
-    'mood-soft': 'shades.200',
+    'info-text': 'midnight.400',
+    'mood-hyped': 'sunshine.400',
+    'mood-okay': 'sunshine.200',
+    'mood-soft': 'paper.200',
     'mood-tired': 'midnight.100',
-    'mood-chaotic': 'sneaker.300',
-    'mood-heavy': 'insideout.300',
+    'mood-chaotic': 'sunshine.500',
+    'mood-heavy': 'midnight.200',
   },
   dark: {
     'bg': 'midnight.500',
@@ -158,9 +121,9 @@ export const SEMANTIC = {
     'surface': 'midnight.400',
     'surface-raised': 'midnight.300',
     'surface-sunken': 'midnight.700',
-    'surface-warm': 'bark.500',
+    'surface-warm': 'sunshine.900',
     'surface-inverse': 'paper.100',
-    'surface-spark': 'spark.400',
+    'surface-accent': 'sunshine.400',
     'scrim': 'midnight.900',
     'text-strong': 'white',
     'text-primary': 'paper.100',
@@ -168,34 +131,34 @@ export const SEMANTIC = {
     'text-placeholder': 'midnight.200',
     'text-inverse': 'paper.900',
     'text-on-hero': 'paper.900',
-    'text-on-spark': 'paper.900',
+    'text-on-accent': 'paper.900',
     'text-on-inverse': 'paper.900',
-    'text-link': 'spark.300',
+    'text-link': 'sunshine.300',
     'text-on-warm': 'paper.100',
     'border': 'paper.100',
     'border-subtle': 'midnight.300',
     'border-input': 'midnight.100',
-    'focus-ring': 'spark.400',
+    'focus-ring': 'sunshine.400',
     'focus-halo': 'paper.900',
-    'shadow': 'bark.400',
-    'success': 'spark.400',
+    'shadow': 'sunshine.800',
+    'success': 'sunshine.400',
     'on-success': 'paper.900',
-    'success-text': 'spark.300',
+    'success-text': 'sunshine.300',
     'warning': 'sunshine.400',
     'on-warning': 'paper.900',
     'warning-text': 'sunshine.300',
     'error': 'sneaker.400',
     'on-error': 'paper.900',
     'error-text': 'sneaker.300',
-    'info': 'insideout.700',
+    'info': 'midnight.300',
     'on-info': 'white',
-    'info-text': 'insideout.200',
-    'mood-hyped': 'spark.400',
-    'mood-okay': 'sunshine.400',
-    'mood-soft': 'shades.300',
-    'mood-tired': 'midnight.200',
-    'mood-chaotic': 'sneaker.300',
-    'mood-heavy': 'insideout.300',
+    'info-text': 'midnight.100',
+    'mood-hyped': 'sunshine.400',
+    'mood-okay': 'sunshine.200',
+    'mood-soft': 'paper.200',
+    'mood-tired': 'midnight.100',
+    'mood-chaotic': 'sunshine.500',
+    'mood-heavy': 'midnight.200',
   },
 };
 
@@ -206,7 +169,7 @@ export const CONTRAST_PAIRS = [
   ),
   ['text-on-hero', 'bg-hero', 'text'],
   ['text-on-warm', 'surface-warm', 'text'],
-  ['text-on-spark', 'surface-spark', 'text'],
+  ['text-on-accent', 'surface-accent', 'text'],
   ['text-on-inverse', 'surface-inverse', 'text'],
   ['on-success', 'success', 'text'],
   ['on-warning', 'warning', 'text'],
@@ -222,7 +185,7 @@ export const CONTRAST_PAIRS = [
   ['border', 'surface-raised', 'ui'],
   ['border-input', 'surface-raised', 'ui'],
   // focus = two-tone ring: passes if the ring OR its halo reaches 3:1 against the surface
-  ...['bg', 'surface', 'surface-raised', 'surface-sunken', 'bg-hero', 'surface-inverse', 'surface-spark', 'surface-warm'].map((bg) => ['focus-ring', bg, 'focus'])
+  ...['bg', 'surface', 'surface-raised', 'surface-sunken', 'bg-hero', 'surface-inverse', 'surface-accent', 'surface-warm'].map((bg) => ['focus-ring', bg, 'focus'])
 ];
 
 // ── Typography ───────────────────────────────────────────────────────────────

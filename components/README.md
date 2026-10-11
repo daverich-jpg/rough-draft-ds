@@ -16,7 +16,7 @@ import 'rough-draft-ds/components/styles.css';
 | `Toggle` | `label`, `description`, `checked/onChange` | `role="switch"`, `aria-checked` |
 | `Chip` | `selected`, `onToggle`, `color` | `aria-pressed`; check icon when on |
 | `Tag` | `onRemove`, `color` | Remove button named "remove {tag}", 44px hit area |
-| `Badge` | `tone` spark/hero/ink/error, `label` | Pass `label` when the number is ambiguous |
+| `Badge` | `tone` accent/hero/ink/error, `label` | Pass `label` when the number is ambiguous |
 | `Sticker` | `color`, `shape` tag/round/burst, `tilt`, `announce` | `aria-hidden` unless `announce` |
 | `Card` | `tone` default/hero/warm/inverse, `zine`, `tape`, `grain`, `tilt`, `flat`, `as` | Semantic `as` element |
 | `ScreenshotCard` | `posts[]`, `theme` dark/light, `tape`, `tilt` | `figure` with label; real text; labelled counts |

@@ -11,17 +11,17 @@ Status key: ✅ meets · ⚠️ meets with a caveat · 🔲 needs product/QA wor
 
 | Pair | Light | Dark |
 |---|---|---|
-| Body text (`text-primary`) on `bg` | 10.96 (AAA) | 16.46 (AAA) |
+| Body text (`text-primary`) on `bg` | 11.98 (AAA) | 16.46 (AAA) |
 | Headlines (`text-strong`) on `bg` | 15.03 (AAA) | 18.79 (AAA) |
-| Secondary text on `bg` | 5.78 (AA) | 13.87 (AAA) |
-| Secondary text on sunken/raised surface | 4.97 (AA) | 8.52 (AAA) |
+| Secondary text on `bg` | 5.73 (AA) | 13.87 (AAA) |
+| Secondary text on sunken/raised surface | 4.92 (AA) | 8.52 (AAA) |
 | Placeholder on input | 6.54 (AA) | 4.92 (AA) |
-| Link on `bg` | 13.70 (AAA) | 15.74 (AAA) |
+| Link on `bg` | 13.70 (AAA) | 14.78 (AAA) |
 | Error text on `bg` | 7.40 (AAA) | 8.61 (AAA) |
 | Ink on Sunshine (hero) | 12.50 (AAA) | 12.50 (AAA) |
-| Ink on Spark Lime | 13.12 (AAA) | 13.12 (AAA) |
+| Text on accent (`surface-accent`) | 16.46 (AAA) | 12.50 (AAA) |
 
-- **Banned:** Sunshine on white (1.37), Sunshine/Lime on cream (≤1.2), and dark-on-dark (brown or ink on navy). Lime and yellow are fills only.
+- **Banned:** Sunshine on white (1.37) or cream (1.20), and ink on navy. Yellow is a fill only.
 - Placeholders are held to full body AA, not the 3:1 that some systems allow.
 
 ## 2. Not relying on colour ✅
@@ -37,7 +37,7 @@ Status key: ✅ meets · ⚠️ meets with a caveat · 🔲 needs product/QA wor
 
 ## 3. Focus ✅
 
-- Global `:focus-visible`: **3px ring + 2px offset halo**. Light theme uses a navy ring with a cream halo; dark theme uses a lime ring with an ink halo. One of the two always reaches ≥3:1 against every surface token (verified for 8 surfaces × 2 themes in the matrix).
+- Global `:focus-visible`: **3px ring + 2px offset halo**. Light theme uses a navy ring with a cream halo; dark theme uses a yellow ring with an ink halo. One of the two always reaches ≥3:1 against every surface token (verified for 8 surfaces × 2 themes in the matrix).
 - The ring combines with sticker shadows through `--rd-elev`, so a focused card keeps its shadow.
 - Never `outline: none` without a replacement. Toggle and tab apply the ring to their visual part.
 - 🔲 QA: run a full keyboard pass in each pattern on real devices.

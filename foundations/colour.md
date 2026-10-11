@@ -1,56 +1,51 @@
 # Colour
 
-**Yellow is the hero. Navy and brown do the heavy lifting. Lime is a spark.**
+**Two key colours: Sunshine Yellow and Midnight Navy.** Yellow is the hero; navy does the heavy lifting. Cream, white and ink are quiet neutrals. Red appears only for errors.
 
-## Core palette
+## Palette
 
-| Name | Hex | OKLCH | Token | Role |
+| Role | Name | Hex | OKLCH | Token |
 |---|---|---|---|---|
-| Sunshine Yellow | `#FFD86C` | 89.5% 0.134 89.7 | `sunshine-400` (pinned) | Primary. Hero surfaces, primary buttons |
-| Paper White | `#FFFFFF` | — | `white` | Raised surfaces, die-cut outlines |
-| Cream | `#FFEFC4` | 95.4% 0.058 90.0 | `paper-100` (pinned) | Default page canvas |
-| Deep Brown | `#433100` | 32.5% 0.066 86.2 | `bark-500` (pinned) | Body text, warm dark surfaces |
-| Midnight Navy | `#090446` | 19.3% 0.114 272.1 | `midnight-500` (pinned) | Dark mode base, inverse surfaces |
-| Spark Lime | `#B6F500` | 89.4% 0.228 126.2 | `spark-400` (pinned) | Accent bursts, under 5% of a screen |
-| Ink | `#1E1B16` | 22.4% 0.010 80.6 | `paper-900` (pinned) | Headlines, sticker shadows, input strokes |
+| **Key colour 1** | Sunshine Yellow | `#FFD86C` | 89.5% 0.134 89.7 | `sunshine-400` (pinned) |
+| **Key colour 2** | Midnight Navy | `#090446` | 19.3% 0.114 272.1 | `midnight-500` (pinned) |
+| Neutral | Cream | `#FFEFC4` | 95.4% 0.058 90.0 | `paper-100` (pinned): page canvas |
+| Neutral | Paper White | `#FFFFFF` | — | `white`: raised surfaces, die-cut edges |
+| Neutral | Ink | `#1E1B16` | 22.4% 0.010 80.6 | `paper-900` (pinned): headlines, sticker shadows |
+| Functional | Error Red | `#BE2514` | 52.0% 0.190 30.5 | `sneaker-600`: errors and destructive actions **only** |
 
-Extended palette (from the board's imagery; for semantic and mood colours only): **Sneaker Red** `sneaker-*`, **Shades Pink** `shades-*`, **Inside-Out Blue** `insideout-*`.
+Lime, brown, pink and blue were removed (D21). Green survives only inside the character illustrations (`components/Character.tsx`), never in UI.
 
 ## How the scales are built
 
 `scripts/build-tokens.mjs` generates 50–900 for every scale in **OKLCH**:
 
-1. Each step has a target lightness (`L`), a chroma multiplier (`C`) and a hue that drifts across the ramp (e.g. yellow → amber → brown at the dark end), interpolated along the shortest arc.
-2. Out-of-gamut colours are mapped into sRGB by reducing chroma only, so lightness and hue are kept.
-3. **Pinned** steps output the exact brand hex, never recomputed. Light seeds (yellow, lime) pin at 400 and dark seeds (brown, navy) at 500. Cream and ink pin at paper-100 and paper-900.
-
-The full hex and OKLCH values for every step are in `design-tokens/build/tokens.css` (commented) and the style guide.
+1. Each step has a target lightness, a chroma multiplier and a hue that drifts across the ramp (yellow → amber at the dark end), interpolated along the shortest arc.
+2. Out-of-gamut colours are mapped into sRGB by reducing chroma only.
+3. **Pinned** steps output the exact brand hex. Yellow pins at 400, navy at 500, cream and ink at paper-100 and paper-900.
 
 ## Semantic tokens
 
-Use semantic tokens in product code, and primitives only for illustration or data viz.
-
 | Group | Tokens |
 |---|---|
-| Surfaces | `bg`, `bg-hero`, `surface`, `surface-raised`, `surface-sunken`, `surface-warm`, `surface-inverse`, `surface-spark`, `scrim` |
-| Text | `text-strong`, `text-primary`, `text-secondary`, `text-placeholder`, `text-inverse`, `text-link`, `text-on-hero`, `text-on-spark`, `text-on-inverse`, `text-on-warm` |
+| Surfaces | `bg`, `bg-hero`, `surface`, `surface-raised`, `surface-sunken`, `surface-warm`, `surface-inverse`, `surface-accent`, `scrim` |
+| Text | `text-strong`, `text-primary`, `text-secondary`, `text-placeholder`, `text-inverse`, `text-link`, `text-on-hero`, `text-on-accent`, `text-on-inverse`, `text-on-warm` |
 | Lines | `border`, `border-subtle`, `border-input`, `focus-ring`, `focus-halo`, `shadow` |
-| Feedback | `success`/`on-success`/`success-text`, `warning`/…, `error`/…, `info`/… |
-| Mood | `mood-hyped`, `mood-okay`, `mood-soft`, `mood-tired`, `mood-chaotic`, `mood-heavy` |
+| Feedback | `success`/`on-success`/`success-text` (navy in light, yellow in dark), `warning`/… (yellow), `error`/… (red), `info`/… (navy tints) |
+| Mood | `mood-hyped` (yellow), `mood-okay` (pale yellow), `mood-soft` (cream), `mood-tired` (pale navy), `mood-chaotic` (deep yellow), `mood-heavy` (navy tint) |
+
+`surface-accent` is the "the one filled thing" colour: checked boxes, toggles on, the check-in button, badges, sticker buttons. **Navy in light, yellow in dark.**
 
 ## Themes
 
-- **Light** (cream/yellow-led): cream canvas, white raised cards, brown body text, ink headlines, ink sticker shadows, navy focus ring.
-- **Dark** (navy/brown-led, *designed, not inverted*): navy canvas, lifted indigo surfaces, cream text, **brown warm surfaces and brown offset shadows**, lime focus ring and lime links. The hero stays yellow, so the brand doesn't go grey at night.
-
-Set `data-theme="light|dark"` on `<html>`, or omit it to follow the OS.
+- **Light:** cream canvas, white raised cards, warm-ink body text (paper-800, 12:1), ink headlines, navy accent and focus ring, ink sticker shadows.
+- **Dark (designed, not inverted):** navy canvas, lifted navy surfaces, cream text, yellow accent, yellow focus ring and links, and sticker shadows in a deep yellow shade (`sunshine-800`) so they stay visible on navy. The hero stays yellow.
 
 ## Rules
 
-1. **Never yellow text on white (1.37:1)** or on cream. Yellow is a surface; ink sits on it.
-2. **Lime is a fill, never light-surface text**, and it covers under 5% of a screen: one sticker, one highlighter swipe, the check-in button.
-3. Text on any mood fill is ink.
-4. Colour is never the only signal.
-5. No gradients. No glows. No grey-blue "calm wellness" palette.
+1. **Two brand colours per screen: yellow and navy.** If you want a third, use a tint of one of the two.
+2. **Red is functional.** Errors and destructive actions only, never decorative.
+3. **Never yellow text on white (1.37:1) or cream (1.20:1).** Yellow is a surface; ink sits on it (12.5:1).
+4. Text on any mood fill is ink. Moods are told apart by face and word, not colour.
+5. No gradients. No glows.
 
 See [contrast-matrix.md](contrast-matrix.md) for every pairing.

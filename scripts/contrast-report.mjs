@@ -23,8 +23,6 @@ const core = [
   ['Sunshine', '#FFD86C'],
   ['Paper White', '#FFFFFF'],
   ['Cream', '#FFEFC4'],
-  ['Spark Lime', '#B6F500'],
-  ['Deep Brown', '#433100'],
   ['Midnight Navy', '#090446'],
   ['Ink', '#1E1B16'],
 ];
@@ -43,9 +41,9 @@ for (const [fn, fh] of core) {
 md.push('');
 md.push('### Banned text pairings (decorative fills only)', '');
 md.push('- **Sunshine on Paper White (1.37:1): unusable for text.** Also no yellow icons on white.');
-md.push('- **Sunshine on Cream (1.15:1)**, **Spark Lime on Cream / White / Sunshine**: same rule.');
-md.push('- **Brown on Navy / Ink on Navy**: both dark. Never pair.');
-md.push('- Lime is a *fill*. Text placed on lime is always Ink.', '');
+md.push('- **Sunshine on Cream (1.20:1)**: same rule.');
+md.push('- **Ink on Navy**: both dark. Never pair.');
+md.push('- Two key colours only: Sunshine + Midnight. Red is functional (errors).', '');
 
 // 2. Semantic pairs per theme
 let failures = 0;

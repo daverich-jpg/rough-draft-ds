@@ -11,14 +11,14 @@ export function Hero() {
             Rough
             <span className="rd-brush" style={{ display: 'block', textTransform: 'none', fontSize: '0.62em', lineHeight: 1, rotate: '-4deg', translate: '0.2em -0.05em', width: 'fit-content', position: 'relative', isolation: 'isolate' }}>
               draft
-              <span aria-hidden style={{ position: 'absolute', left: -4, right: -8, bottom: '0.12em', height: '0.22em', background: 'var(--rd-spark-400)', zIndex: -1, rotate: '2deg' }} />
+              <span aria-hidden style={{ position: 'absolute', left: -4, right: -8, bottom: '0.12em', height: '0.22em', background: 'var(--rd-sunshine-400)', zIndex: -1, rotate: '2deg' }} />
             </span>
           </h1>
           <p className="sg-lede" style={{ maxWidth: 560, marginTop: 24 }}>
             Wellness for people who are tired of being sold wellness. These are the tokens, components, patterns and voice rules. Everything here is in progress.{' '}
             <em>So are you. That's the point.</em>
           </p>
-          <Sticker color="pink" tilt={3} style={{ position: 'absolute', right: '4%', top: '18%' }} className="hidden md:inline-flex">
+          <Sticker color="cream" tilt={3} style={{ position: 'absolute', right: '4%', top: '18%' }} className="hidden md:inline-flex">
             not a template
           </Sticker>
         </div>
@@ -44,11 +44,11 @@ export function Hero() {
           <Character kind="sprout" mood="hyped" width={180} title="Sprout, the main character, looking hyped" />
         </div>
         <div className="col-span-6 lg:col-span-4 rd-overprint rd-grain" style={{ padding: '24px 20px', rotate: '1deg', boxShadow: 'var(--rd-shadow-md)' }}>
-          <p className="rd-poster rd-overprint__ink" data-ink="in progress" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)', color: 'var(--rd-paper-800)' }} aria-label="in progress">
+          <p className="rd-poster rd-overprint__ink" data-ink="in progress" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)' }} aria-label="in progress">
             in progress
           </p>
-          <span className="rd-caption" style={{ color: 'var(--rd-paper-800)' }}>
-            risograph overprint · lime on grey
+          <span className="rd-caption" style={{ color: 'var(--rd-midnight-500)' }}>
+            risograph overprint · navy on yellow
           </span>
         </div>
       </div>

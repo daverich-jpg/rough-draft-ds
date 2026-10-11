@@ -40,10 +40,10 @@ Slightly alien sprout kids in streetwear: flat colour, 3px ink linework, white d
 
 | Name | Mood | Look | Use for | Never |
 |---|---|---|---|---|
-| **Sprout** | Hyped, chaotic-good | Spiky lime head, yellow hoodie | Onboarding hellos, wins, marketing, "you posted your first draft" | Sad or sensitive moments |
+| **Sprout** | Hyped, chaotic-good | Spiky green head, yellow hoodie, navy jeans | Onboarding hellos, wins, marketing, "you posted your first draft" | Sad or sensitive moments |
 | **Doze** | Tired, unbothered | Hood up, drooping leaf, half-lidded eyes | Night mode, rest prompts, empty states, low-energy days | Urgent errors |
-| **Moss** | Soft, shy, sincere | Round mossy head, pink flowers | Journaling, gentle check-ins, **the only character allowed in sensitive states** | Jokes |
-| **Static** | Chaotic, glitchy, self-aware | Wild spikes, red hoodie, mismatched eyes | Recoverable errors, chaos moods, offline | Anything about safety, health or money |
+| **Moss** | Soft, shy, sincere | Round mossy head, little yellow flowers, cream hoodie | Journaling, gentle check-ins, **the only character allowed in sensitive states** | Jokes |
+| **Static** | Chaotic, glitchy, self-aware | Wild spikes, navy hoodie with yellow stripes, mismatched eyes | Recoverable errors, chaos moods, offline | Anything about safety, health or money |
 
 Each character has six expressions: hyped, okay, soft, tired, chaotic, heavy (`<Character kind mood />`).
 
@@ -120,7 +120,7 @@ The full, living list is in `patterns/microcopy.ts`.
 
 ## 6. Visual language (summary; detail in `/foundations`)
 
-- **Colour:** Sunshine Yellow is the hero. Midnight Navy and Deep Brown do the heavy lifting. Cream is the canvas. Spark Lime is a spark, under 5% of any screen. Yellow on white is banned for text.
+- **Colour:** **two key colours, Sunshine Yellow and Midnight Navy.** Yellow is the hero; navy does the heavy lifting. Cream, white and ink are quiet neutrals. Red is for errors only. Green lives only in the characters. Yellow on white is banned for text.
 - **Type:** three voices. Loud Display (Anton, caps), Hand-drawn Brush (Permanent Marker, 1–6 words) and Quiet Workhorse (Archivo). At most 2 per screen + a brush accent.
 - **Shape:** sharp corners for zine and editorial, pillowy for UI. **Strokes sparingly**: shape comes from fill + hard offset sticker shadow (no blur, ever). Strokes only on inputs, ticks, focus and "missing" states.
 - **Motion:** slap, stamp, peel, wiggle. UI under 300ms. Reduced motion means fades.
@@ -135,7 +135,7 @@ The full, living list is in `patterns/microcopy.ts`.
 
 **Illustration.** The editors only. Flat colour, ink line, die-cut. No gradients, no 3D, no "coach" poses.
 
-**Texture.** Photocopy grain, halftone, tape strips, diagonal hazard stripes, torn paper, riso overprint (lime over grey). One or two per surface, never all at once, and never on forms.
+**Texture.** Photocopy grain, halftone, tape strips, diagonal hazard stripes, torn paper, riso overprint (navy over yellow). One or two per surface, never all at once, and never on forms.
 
 ## 8. Principles (tie-breakers)
 

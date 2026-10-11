@@ -93,6 +93,6 @@ Tailwind v3: `presets: [require('rough-draft-ds/design-tokens/build/tailwind.con
 1. Real over polished.
 2. Loud, but never at the user's emotional expense.
 3. Chaos lives on a grid.
-4. Warmth is non-negotiable (yellow, brown, human photography).
+4. Warmth is non-negotiable (yellow, cream, human photography).
 5. Accessibility is part of the aesthetic, not a compromise.
 6. If it looks like a wellness-app template, redo it.

@@ -50,7 +50,7 @@ export function TopNav({ items, current, onNavigate, end }: { items: NavItem[]; 
 
 /**
  * Mobile bottom tab bar. Exactly 5 slots; the middle one is the primary
- * action (check in) and gets the big lime button.
+ * action (check in) and gets the big accent button.
  */
 export function TabBar({ items, current, primary, onNavigate }: { items: NavItem[]; current: string; primary: string; onNavigate?: (id: string) => void }) {
   return (

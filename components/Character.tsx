@@ -23,13 +23,13 @@ export const CHARACTERS: Record<CharacterKind, { name: string; vibe: string; use
   },
   moss: {
     name: 'Moss',
-    vibe: 'Soft, a little shy, grows flowers when it feels safe.',
+    vibe: 'Soft, a little shy, grows little yellow flowers when it feels safe.',
     useFor: 'Journaling, gentle check-ins, comfort, and the calm presence in sensitive states.',
     never: 'Jokes. Moss is the sincere one.',
   },
   static: {
     name: 'Static',
-    vibe: 'Too many tabs open. Glitchy, fast, funny about it.',
+    vibe: 'Too many tabs open. Glitchy, fast, funny about it. Navy hoodie, yellow stripes.',
     useFor: 'Recoverable errors, "chaos" moods, offline, "we broke something".',
     never: 'Anything about the user\'s safety, health or money.',
   },
@@ -44,16 +44,22 @@ export const MOODS: Record<Mood, { word: string; alt: string; color: string }> =
   heavy: { word: 'heavy', alt: 'heavy, low, sad', color: 'var(--rd-mood-heavy)' },
 };
 
-const c = (scale: keyof typeof tokens.scales, step: keyof (typeof tokens.scales)['spark']['steps']) =>
+const c = (scale: keyof typeof tokens.scales, step: keyof (typeof tokens.scales)['sunshine']['steps']) =>
   tokens.scales[scale].steps[step].hex;
 const INK = c('paper', '900');
+/**
+ * Illustration-only greens (D21). The characters keep their sprout skin from the
+ * moodboard; green never appears in UI. Everything else they wear comes from
+ * the two key colours (yellow + navy) and the paper neutrals.
+ */
+const GREEN = { light: '#C0FE60', base: '#B6F500', mid: '#8DD71E', deep: '#6CAE15' } as const;
 const WHITE = '#FFFFFF';
 
 const LOOK: Record<CharacterKind, { skin: string; skinShade: string; hoodie: string; jeans: string; jeansSeam: string; swoosh: string }> = {
-  sprout: { skin: c('spark', '400'), skinShade: c('spark', '500'), hoodie: c('sunshine', '400'), jeans: c('insideout', '500'), jeansSeam: c('insideout', '300'), swoosh: c('sneaker', '500') },
-  doze: { skin: c('spark', '300'), skinShade: c('spark', '400'), hoodie: c('midnight', '300'), jeans: c('paper', '700'), jeansSeam: c('paper', '500'), swoosh: c('midnight', '300') },
-  moss: { skin: c('spark', '500'), skinShade: c('spark', '600'), hoodie: c('shades', '200'), jeans: c('insideout', '400'), jeansSeam: c('insideout', '200'), swoosh: c('sneaker', '500') },
-  static: { skin: c('spark', '400'), skinShade: c('spark', '600'), hoodie: c('sneaker', '400'), jeans: c('paper', '800'), jeansSeam: c('paper', '600'), swoosh: c('spark', '500') },
+  sprout: { skin: GREEN.base, skinShade: GREEN.mid, hoodie: c('sunshine', '400'), jeans: c('midnight', '300'), jeansSeam: c('midnight', '200'), swoosh: c('midnight', '500') },
+  doze: { skin: GREEN.light, skinShade: GREEN.base, hoodie: c('midnight', '300'), jeans: c('paper', '700'), jeansSeam: c('paper', '500'), swoosh: c('midnight', '300') },
+  moss: { skin: GREEN.mid, skinShade: GREEN.deep, hoodie: c('paper', '100'), jeans: c('midnight', '200'), jeansSeam: c('midnight', '100'), swoosh: c('sunshine', '500') },
+  static: { skin: GREEN.base, skinShade: GREEN.deep, hoodie: c('midnight', '500'), jeans: c('paper', '800'), jeansSeam: c('paper', '600'), swoosh: c('sunshine', '400') },
 };
 
 const HEAD: Record<CharacterKind, string> = {
@@ -68,8 +74,8 @@ function Face({ mood, skin }: { mood: Mood; skin: string }) {
   const eye = (cx: number, rx = 6, ry = 7) => <ellipse cx={cx} cy={41} rx={rx} ry={ry} fill={WHITE} stroke={INK} strokeWidth={2.4} />;
   const blush = (
     <>
-      <ellipse cx={44} cy={49} rx={4} ry={2.4} fill={c('shades', '300')} />
-      <ellipse cx={76} cy={49} rx={4} ry={2.4} fill={c('shades', '300')} />
+      <ellipse cx={44} cy={49} rx={4} ry={2.4} fill={c('sunshine', '500')} opacity={0.7} />
+      <ellipse cx={76} cy={49} rx={4} ry={2.4} fill={c('sunshine', '500')} opacity={0.7} />
     </>
   );
   switch (mood) {
@@ -83,7 +89,7 @@ function Face({ mood, skin }: { mood: Mood; skin: string }) {
           <circle cx={52.4} cy={37.4} r={1.2} fill={WHITE} />
           <circle cx={72.4} cy={37.4} r={1.2} fill={WHITE} />
           <path d="M50 50 Q60 63 70 50 Z" fill={INK} stroke={INK} strokeWidth={2.4} strokeLinejoin="round" />
-          <path d="M55 55.5 Q60 59.5 65 55.5 Q60 53.5 55 55.5Z" fill={c('sneaker', '400')} />
+          <path d="M55 55.5 Q60 59.5 65 55.5 Q60 53.5 55 55.5Z" fill={c('sunshine', '500')} />
         </g>
       );
     case 'okay':
@@ -140,7 +146,7 @@ function Face({ mood, skin }: { mood: Mood; skin: string }) {
           <path d="M45 31.5 Q50 31 55.5 33.8" {...stroke} />
           <path d="M75 31.5 Q70 31 64.5 33.8" {...stroke} />
           <path d="M55 55 Q60 51.5 65 55" {...stroke} />
-          <path d="M44.5 49 q-2.2 3.4 0 4.6 q2.2 -1.2 0 -4.6Z" fill={c('insideout', '300')} stroke={INK} strokeWidth={1.4} />
+          <path d="M44.5 49 q-2.2 3.4 0 4.6 q2.2 -1.2 0 -4.6Z" fill={c('midnight', '100')} stroke={INK} strokeWidth={1.4} />
         </g>
       );
   }
@@ -211,7 +217,7 @@ export function Character({ kind = 'sprout', mood = 'okay', crop = 'full', title
         <path d="M34 63 Q60 54 86 63 L93 98 Q60 105 27 98 Z" fill={L.hoodie} {...line} />
         <path d="M44 86 Q60 90 76 86 L74 96 Q60 99 46 96Z" fill="none" stroke={INK} strokeWidth={2} strokeLinejoin="round" />
         <path d="M55 64 L54 76 M65 64 L66 76" stroke={INK} strokeWidth={2} strokeLinecap="round" />
-        {kind === 'static' && <path d="M30 80 L90 80 M29 86 L91 86" stroke={WHITE} strokeWidth={3} />}
+        {kind === 'static' && <path d="M30 80 L90 80 M29 86 L91 86" stroke={c('sunshine', '400')} strokeWidth={3} />}
         {/* hands */}
         <circle cx={25} cy={100} r={6} fill={L.skin} {...line} />
         <circle cx={95} cy={100} r={6} fill={L.skin} {...line} />
@@ -234,9 +240,9 @@ export function Character({ kind = 'sprout', mood = 'okay', crop = 'full', title
             ].map(([x, y]) => (
               <g key={x} transform={`translate(${x} ${y})`}>
                 {[0, 72, 144, 216, 288].map((a) => (
-                  <ellipse key={a} cx={0} cy={-5.5} rx={3.6} ry={5.5} transform={`rotate(${a})`} fill={c('shades', '400')} stroke={INK} strokeWidth={1.8} />
+                  <ellipse key={a} cx={0} cy={-5.5} rx={3.6} ry={5.5} transform={`rotate(${a})`} fill={c('sunshine', '400')} stroke={INK} strokeWidth={1.8} />
                 ))}
-                <circle r={2.6} fill={c('sunshine', '400')} stroke={INK} strokeWidth={1.6} />
+                <circle r={2.6} fill={WHITE} stroke={INK} strokeWidth={1.6} />
               </g>
             ))}
           </>

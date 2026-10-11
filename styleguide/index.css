@@ -51,7 +51,7 @@
   .sg-section__head { display: grid; gap: 12px; margin-bottom: 40px; max-width: 760px; }
   .sg-section__num { justify-self: start; }
   .sg-h3 { font-family: var(--rd-font-sans); font-weight: 800; font-size: 1.25rem; letter-spacing: -0.01em; color: var(--rd-text-strong); margin: 48px 0 16px; display: flex; align-items: center; gap: 10px; }
-  .sg-h3::before { content: ''; width: 12px; height: 12px; background: var(--rd-spark-500); rotate: 45deg; flex: none; }
+  .sg-h3::before { content: ''; width: 12px; height: 12px; background: var(--rd-sunshine-500); rotate: 45deg; flex: none; }
   .sg-lede { font-size: var(--rd-text-body-lg); line-height: 1.55; margin: 0; color: var(--rd-text-primary); }
   .sg-note { font-size: 0.875rem; color: var(--rd-text-secondary); margin: 8px 0 0; }
   .sg-flag { display: inline-flex; gap: 6px; align-items: center; padding: 2px 8px; border-radius: 6px; background: color-mix(in oklch, var(--rd-error) 14%, transparent); color: var(--rd-error-text); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -77,7 +77,7 @@
 
   .sg-do, .sg-dont { border-radius: var(--rd-radius-md); overflow: hidden; background: var(--rd-surface-raised); }
   .sg-verdict { display: flex; align-items: center; gap: 8px; padding: 8px 14px; font-weight: 800; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.04em; }
-  .sg-do .sg-verdict { background: var(--rd-spark-400); color: var(--rd-paper-900); }
+  .sg-do .sg-verdict { background: var(--rd-sunshine-400); color: var(--rd-paper-900); }
   .sg-dont .sg-verdict { background: var(--rd-sneaker-600); color: var(--rd-white); }
   .sg-ex { padding: 20px; min-height: 160px; display: grid; place-items: center; }
   .sg-why { padding: 10px 14px 14px; font-size: 0.875rem; color: var(--rd-text-secondary); margin: 0; }

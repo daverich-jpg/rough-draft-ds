@@ -8,22 +8,20 @@ Legend: **AAA** ≥ 7 · **AA** ≥ 4.5 · **large only** 3 to 4.5 (≥24px, or 
 
 Rows are the text colour, columns are the background.
 
-| text ↓ / bg → | Sunshine | Paper White | Cream | Spark Lime | Deep Brown | Midnight Navy | Ink |
-|---|---|---|---|---|---|---|---|
-| **Sunshine** | · | 1.37 ❌ | 1.20 ❌ | 1.05 ❌ | 9.11 ✅ | 13.68 ✅ | 12.50 ✅ |
-| **Paper White** | 1.37 ❌ | · | 1.14 ❌ | 1.31 ❌ | 12.52 ✅ | 18.79 ✅ | 17.16 ✅ |
-| **Cream** | 1.20 ❌ | 1.14 ❌ | · | 1.15 ❌ | 10.96 ✅ | 16.46 ✅ | 15.03 ✅ |
-| **Spark Lime** | 1.05 ❌ | 1.31 ❌ | 1.15 ❌ | · | 9.57 ✅ | 14.36 ✅ | 13.12 ✅ |
-| **Deep Brown** | 9.11 ✅ | 12.52 ✅ | 10.96 ✅ | 9.57 ✅ | · | 1.50 ❌ | 1.37 ❌ |
-| **Midnight Navy** | 13.68 ✅ | 18.79 ✅ | 16.46 ✅ | 14.36 ✅ | 1.50 ❌ | · | 1.09 ❌ |
-| **Ink** | 12.50 ✅ | 17.16 ✅ | 15.03 ✅ | 13.12 ✅ | 1.37 ❌ | 1.09 ❌ | · |
+| text ↓ / bg → | Sunshine | Paper White | Cream | Midnight Navy | Ink |
+|---|---|---|---|---|---|
+| **Sunshine** | · | 1.37 ❌ | 1.20 ❌ | 13.68 ✅ | 12.50 ✅ |
+| **Paper White** | 1.37 ❌ | · | 1.14 ❌ | 18.79 ✅ | 17.16 ✅ |
+| **Cream** | 1.20 ❌ | 1.14 ❌ | · | 16.46 ✅ | 15.03 ✅ |
+| **Midnight Navy** | 13.68 ✅ | 18.79 ✅ | 16.46 ✅ | · | 1.09 ❌ |
+| **Ink** | 12.50 ✅ | 17.16 ✅ | 15.03 ✅ | 1.09 ❌ | · |
 
 ### Banned text pairings (decorative fills only)
 
 - **Sunshine on Paper White (1.37:1): unusable for text.** Also no yellow icons on white.
-- **Sunshine on Cream (1.15:1)**, **Spark Lime on Cream / White / Sunshine**: same rule.
-- **Brown on Navy / Ink on Navy**: both dark. Never pair.
-- Lime is a *fill*. Text placed on lime is always Ink.
+- **Sunshine on Cream (1.20:1)**: same rule.
+- **Ink on Navy**: both dark. Never pair.
+- Two key colours only: Sunshine + Midnight. Red is functional (errors).
 
 ## 2. Semantic pairs: light theme
 
@@ -33,14 +31,14 @@ Rows are the text colour, columns are the background.
 | `text-strong` | `surface` | #1E1B16 | #FFFAEC | 16.46 | AAA |
 | `text-strong` | `surface-raised` | #1E1B16 | #FFFFFF | 17.16 | AAA |
 | `text-strong` | `surface-sunken` | #1E1B16 | #EEDEBB | 12.91 | AAA |
-| `text-primary` | `bg` | #433100 | #FFEFC4 | 10.96 | AAA |
-| `text-primary` | `surface` | #433100 | #FFFAEC | 12.00 | AAA |
-| `text-primary` | `surface-raised` | #433100 | #FFFFFF | 12.52 | AAA |
-| `text-primary` | `surface-sunken` | #433100 | #EEDEBB | 9.42 | AAA |
-| `text-secondary` | `bg` | #76581A | #FFEFC4 | 5.78 | AA |
-| `text-secondary` | `surface` | #76581A | #FFFAEC | 6.33 | AA |
-| `text-secondary` | `surface-raised` | #76581A | #FFFFFF | 6.60 | AA |
-| `text-secondary` | `surface-sunken` | #76581A | #EEDEBB | 4.97 | AA |
+| `text-primary` | `bg` | #312D27 | #FFEFC4 | 11.98 | AAA |
+| `text-primary` | `surface` | #312D27 | #FFFAEC | 13.12 | AAA |
+| `text-primary` | `surface-raised` | #312D27 | #FFFFFF | 13.68 | AAA |
+| `text-primary` | `surface-sunken` | #312D27 | #EEDEBB | 10.29 | AAA |
+| `text-secondary` | `bg` | #635D50 | #FFEFC4 | 5.73 | AA |
+| `text-secondary` | `surface` | #635D50 | #FFFAEC | 6.27 | AA |
+| `text-secondary` | `surface-raised` | #635D50 | #FFFFFF | 6.54 | AA |
+| `text-secondary` | `surface-sunken` | #635D50 | #EEDEBB | 4.92 | AA |
 | `text-placeholder` | `bg` | #635D50 | #FFEFC4 | 5.73 | AA (placeholder held to body AA) |
 | `text-placeholder` | `surface` | #635D50 | #FFFAEC | 6.27 | AA (placeholder held to body AA) |
 | `text-placeholder` | `surface-raised` | #635D50 | #FFFFFF | 6.54 | AA (placeholder held to body AA) |
@@ -51,33 +49,33 @@ Rows are the text colour, columns are the background.
 | `text-link` | `surface-sunken` | #1A1664 | #EEDEBB | 11.77 | AAA |
 | `text-on-hero` | `bg-hero` | #1E1B16 | #FFD86C | 12.50 | AAA |
 | `text-on-warm` | `surface-warm` | #1E1B16 | #FFEBBA | 14.58 | AAA |
-| `text-on-spark` | `surface-spark` | #1E1B16 | #B6F500 | 13.12 | AAA |
+| `text-on-accent` | `surface-accent` | #FFEFC4 | #090446 | 16.46 | AAA |
 | `text-on-inverse` | `surface-inverse` | #FFEFC4 | #090446 | 16.46 | AAA |
-| `on-success` | `success` | #1E1B16 | #B6F500 | 13.12 | AAA |
+| `on-success` | `success` | #FFEFC4 | #090446 | 16.46 | AAA |
 | `on-warning` | `warning` | #1E1B16 | #FFD86C | 12.50 | AAA |
 | `on-error` | `error` | #FFFFFF | #BE2514 | 6.06 | AA |
-| `on-info` | `info` | #090446 | #DEE8FF | 15.30 | AAA |
-| `success-text` | `bg` | #2E5A05 | #FFEFC4 | 7.13 | AAA |
+| `on-info` | `info` | #090446 | #F1F3FD | 16.98 | AAA |
+| `success-text` | `bg` | #1A1664 | #FFEFC4 | 13.70 | AAA |
 | `warning-text` | `bg` | #6D4700 | #FFEFC4 | 7.21 | AAA |
 | `error-text` | `bg` | #9B1301 | #FFEFC4 | 7.40 | AAA |
 | `error-text` | `surface-raised` | #9B1301 | #FFFFFF | 8.44 | AAA |
-| `info-text` | `bg` | #283A9D | #FFEFC4 | 8.43 | AAA |
-| `text-on-hero` | `mood-hyped` | #1E1B16 | #B6F500 | 13.12 | AAA |
-| `text-on-hero` | `mood-okay` | #1E1B16 | #FFD86C | 12.50 | AAA |
-| `text-on-hero` | `mood-soft` | #1E1B16 | #FFC5D9 | 11.64 | AAA |
+| `info-text` | `bg` | #1A1664 | #FFEFC4 | 13.70 | AAA |
+| `text-on-hero` | `mood-hyped` | #1E1B16 | #FFD86C | 12.50 | AAA |
+| `text-on-hero` | `mood-okay` | #1E1B16 | #FFEBBA | 14.58 | AAA |
+| `text-on-hero` | `mood-soft` | #1E1B16 | #EEDEBB | 12.91 | AAA |
 | `text-on-hero` | `mood-tired` | #1E1B16 | #D7DCF9 | 12.66 | AAA |
-| `text-on-hero` | `mood-chaotic` | #1E1B16 | #FF9181 | 7.86 | AAA |
-| `text-on-hero` | `mood-heavy` | #1E1B16 | #95B1FF | 8.18 | AAA |
+| `text-on-hero` | `mood-chaotic` | #1E1B16 | #EBB443 | 9.11 | AAA |
+| `text-on-hero` | `mood-heavy` | #1E1B16 | #9AA5EB | 7.32 | AAA |
 | `border` | `bg` | #1E1B16 | #FFEFC4 | 15.03 | AA (UI) |
 | `border` | `surface-raised` | #1E1B16 | #FFFFFF | 17.16 | AA (UI) |
-| `border-input` | `surface-raised` | #433100 | #FFFFFF | 12.52 | AA (UI) |
+| `border-input` | `surface-raised` | #474238 | #FFFFFF | 9.98 | AA (UI) |
 | `focus-ring` | `bg` | #1A1664 | #FFEFC4 | 13.70 | AA (UI) |
 | `focus-ring` | `surface` | #1A1664 | #FFFAEC | 15.00 | AA (UI) |
 | `focus-ring` | `surface-raised` | #1A1664 | #FFFFFF | 15.64 | AA (UI) |
 | `focus-ring` | `surface-sunken` | #1A1664 | #EEDEBB | 11.77 | AA (UI) |
 | `focus-ring` | `bg-hero` | #1A1664 | #FFD86C | 11.39 | AA (UI) |
 | `focus-halo` | `surface-inverse` | #FFFAEC | #090446 | 18.02 | AA (UI) |
-| `focus-ring` | `surface-spark` | #1A1664 | #B6F500 | 11.95 | AA (UI) |
+| `focus-halo` | `surface-accent` | #FFFAEC | #090446 | 18.02 | AA (UI) |
 | `focus-ring` | `surface-warm` | #1A1664 | #FFEBBA | 13.29 | AA (UI) |
 
 ## 2. Semantic pairs: dark theme
@@ -100,38 +98,38 @@ Rows are the text colour, columns are the background.
 | `text-placeholder` | `surface` | #9AA5EB | #1A1664 | 6.67 | AA (placeholder held to body AA) |
 | `text-placeholder` | `surface-raised` | #9AA5EB | #2C2891 | 4.92 | AA (placeholder held to body AA) |
 | `text-placeholder` | `surface-sunken` | #9AA5EB | #04002D | 8.59 | AAA (placeholder held to body AA) |
-| `text-link` | `bg` | #C0FE60 | #090446 | 15.74 | AAA |
-| `text-link` | `surface` | #C0FE60 | #1A1664 | 13.10 | AAA |
-| `text-link` | `surface-raised` | #C0FE60 | #2C2891 | 9.67 | AAA |
-| `text-link` | `surface-sunken` | #C0FE60 | #04002D | 16.86 | AAA |
+| `text-link` | `bg` | #FFE19E | #090446 | 14.78 | AAA |
+| `text-link` | `surface` | #FFE19E | #1A1664 | 12.30 | AAA |
+| `text-link` | `surface-raised` | #FFE19E | #2C2891 | 9.08 | AAA |
+| `text-link` | `surface-sunken` | #FFE19E | #04002D | 15.83 | AAA |
 | `text-on-hero` | `bg-hero` | #1E1B16 | #FFD86C | 12.50 | AAA |
-| `text-on-warm` | `surface-warm` | #FFEFC4 | #433100 | 10.96 | AAA |
-| `text-on-spark` | `surface-spark` | #1E1B16 | #B6F500 | 13.12 | AAA |
+| `text-on-warm` | `surface-warm` | #FFEFC4 | #482C00 | 11.25 | AAA |
+| `text-on-accent` | `surface-accent` | #1E1B16 | #FFD86C | 12.50 | AAA |
 | `text-on-inverse` | `surface-inverse` | #1E1B16 | #FFEFC4 | 15.03 | AAA |
-| `on-success` | `success` | #1E1B16 | #B6F500 | 13.12 | AAA |
+| `on-success` | `success` | #1E1B16 | #FFD86C | 12.50 | AAA |
 | `on-warning` | `warning` | #1E1B16 | #FFD86C | 12.50 | AAA |
 | `on-error` | `error` | #1E1B16 | #F75F4C | 5.47 | AA |
-| `on-info` | `info` | #FFFFFF | #283A9D | 9.62 | AAA |
-| `success-text` | `bg` | #C0FE60 | #090446 | 15.74 | AAA |
+| `on-info` | `info` | #FFFFFF | #2C2891 | 11.54 | AAA |
+| `success-text` | `bg` | #FFE19E | #090446 | 14.78 | AAA |
 | `warning-text` | `bg` | #FFE19E | #090446 | 14.78 | AAA |
 | `error-text` | `bg` | #FF9181 | #090446 | 8.61 | AAA |
 | `error-text` | `surface-raised` | #FF9181 | #2C2891 | 5.29 | AA |
-| `info-text` | `bg` | #BED0FF | #090446 | 12.22 | AAA |
-| `text-on-hero` | `mood-hyped` | #1E1B16 | #B6F500 | 13.12 | AAA |
-| `text-on-hero` | `mood-okay` | #1E1B16 | #FFD86C | 12.50 | AAA |
-| `text-on-hero` | `mood-soft` | #1E1B16 | #FF9ABF | 8.68 | AAA |
-| `text-on-hero` | `mood-tired` | #1E1B16 | #9AA5EB | 7.32 | AAA |
-| `text-on-hero` | `mood-chaotic` | #1E1B16 | #FF9181 | 7.86 | AAA |
-| `text-on-hero` | `mood-heavy` | #1E1B16 | #95B1FF | 8.18 | AAA |
+| `info-text` | `bg` | #D7DCF9 | #090446 | 13.87 | AAA |
+| `text-on-hero` | `mood-hyped` | #1E1B16 | #FFD86C | 12.50 | AAA |
+| `text-on-hero` | `mood-okay` | #1E1B16 | #FFEBBA | 14.58 | AAA |
+| `text-on-hero` | `mood-soft` | #1E1B16 | #EEDEBB | 12.91 | AAA |
+| `text-on-hero` | `mood-tired` | #1E1B16 | #D7DCF9 | 12.66 | AAA |
+| `text-on-hero` | `mood-chaotic` | #1E1B16 | #EBB443 | 9.11 | AAA |
+| `text-on-hero` | `mood-heavy` | #1E1B16 | #9AA5EB | 7.32 | AAA |
 | `border` | `bg` | #FFEFC4 | #090446 | 16.46 | AA (UI) |
 | `border` | `surface-raised` | #FFEFC4 | #2C2891 | 10.11 | AA (UI) |
 | `border-input` | `surface-raised` | #D7DCF9 | #2C2891 | 8.52 | AA (UI) |
-| `focus-ring` | `bg` | #B6F500 | #090446 | 14.36 | AA (UI) |
-| `focus-ring` | `surface` | #B6F500 | #1A1664 | 11.95 | AA (UI) |
-| `focus-ring` | `surface-raised` | #B6F500 | #2C2891 | 8.82 | AA (UI) |
-| `focus-ring` | `surface-sunken` | #B6F500 | #04002D | 15.39 | AA (UI) |
+| `focus-ring` | `bg` | #FFD86C | #090446 | 13.68 | AA (UI) |
+| `focus-ring` | `surface` | #FFD86C | #1A1664 | 11.39 | AA (UI) |
+| `focus-ring` | `surface-raised` | #FFD86C | #2C2891 | 8.40 | AA (UI) |
+| `focus-ring` | `surface-sunken` | #FFD86C | #04002D | 14.66 | AA (UI) |
 | `focus-halo` | `bg-hero` | #1E1B16 | #FFD86C | 12.50 | AA (UI) |
 | `focus-halo` | `surface-inverse` | #1E1B16 | #FFEFC4 | 15.03 | AA (UI) |
-| `focus-halo` | `surface-spark` | #1E1B16 | #B6F500 | 13.12 | AA (UI) |
-| `focus-ring` | `surface-warm` | #B6F500 | #433100 | 9.57 | AA (UI) |
+| `focus-halo` | `surface-accent` | #1E1B16 | #FFD86C | 12.50 | AA (UI) |
+| `focus-ring` | `surface-warm` | #FFD86C | #482C00 | 9.35 | AA (UI) |
 
